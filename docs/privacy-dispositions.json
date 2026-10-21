@@ -1,0 +1,818 @@
+[
+  {
+    "path": "pyproject.toml",
+    "category": "ipv6",
+    "line_sha256": "9e417e8f5eb31fa9976353a9aa1952d60a89dfd449209cbfa5fa20a3231f72a2",
+    "reason": "Python classifier double-colon syntax, not an IPv6 endpoint."
+  },
+  {
+    "path": "scripts/audit-history.py",
+    "category": "ipv6",
+    "line_sha256": "186dd923e1aca374497b651b723f77fcbc57db7c9c7e50112f63e4a551e0f0a8",
+    "reason": "Detector regex source, not an operational identifier or IPv6 endpoint."
+  },
+  {
+    "path": "scripts/audit-history.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "dd74bd10a0a6459a5dbb8da183f73de8bb24dbd0fcbd03f4592a80ac7fdd163b",
+    "reason": "Detector regex source, not an operational identifier or IPv6 endpoint."
+  },
+  {
+    "path": "scripts/audit-identifiers.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "d539ab6b3b136fa38bb9475659facd93b18e08fe8c149b351532f1fb065edae2",
+    "reason": "Identifier detector regex source, not an operational identifier or endpoint."
+  },
+  {
+    "path": "scripts/audit-identifiers.py",
+    "category": "ipv6",
+    "line_sha256": "f428b5e0ece8ceca75547b573c87459c1ac293b915a293e24117f2bb73e8c475",
+    "reason": "Identifier detector regex source, not an operational identifier or endpoint."
+  },
+  {
+    "path": "scripts/generate-fleets.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "1c4575e7ec9f1ce02ddd9f9f4f0fd45bd4f39e82f6ed4454879a8eda6ece9d30",
+    "reason": "Synthetic fixture generator format expression; independently tested SYNTH/SYN output identifiers."
+  },
+  {
+    "path": "scripts/generate-fleets.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "4964834b555040d74d970846c9eaf7123c5f884a0dc858110b73ec77cd4b3a69",
+    "reason": "Synthetic fixture generator format expression; independently tested SYNTH/SYN output identifiers."
+  },
+  {
+    "path": "scripts/generate-fleets.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "230fc85efe0463bb11f303eec4000dbb0da9eca6b083d42765f692475e2026c0",
+    "reason": "Synthetic fixture generator format expression; independently tested SYNTH/SYN output identifiers."
+  },
+  {
+    "path": "tapediag/parsers.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "a319651109ab551d42c89a3692313f8cf87d301b252bfaac76a4ae7c592a7355",
+    "reason": "Parser regex for serial/identifier syntax, not an observed device value."
+  },
+  {
+    "path": "tests/test_provenance.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "aa2373ba8eae656a86db0416eb76d0d62e6279b81b2d5bedf6b980d75fe6bf8d",
+    "reason": "Fixture safety assertions and regex source; no observed identifiers or endpoints."
+  },
+  {
+    "path": "tests/test_provenance.py",
+    "category": "ipv6",
+    "line_sha256": "d16741c763ba0e73527546f0af96781965f86060324a9b69d737fa4c12691ef1",
+    "reason": "Fixture safety assertions and regex source; no observed identifiers or endpoints."
+  },
+  {
+    "path": "tests/test_publication.py",
+    "category": "public-reference",
+    "line_sha256": "f4a3bde2331bdd34fc808ba69fff3685e1da9cd362d45621ab538d40d061b29a",
+    "reason": "Invented negative privacy/URL test input using reserved example.invalid addresses and synthetic credentials."
+  },
+  {
+    "path": "tests/test_publication.py",
+    "category": "email",
+    "line_sha256": "ff4988600dec790954ef254ff9fe669fef02e0d48b0cebc8e0ed113504e517c5",
+    "reason": "Invented negative privacy/URL test input using reserved example.invalid addresses and synthetic credentials."
+  },
+  {
+    "path": "tests/test_publication.py",
+    "category": "public-reference",
+    "line_sha256": "ff4988600dec790954ef254ff9fe669fef02e0d48b0cebc8e0ed113504e517c5",
+    "reason": "Invented negative privacy/URL test input using reserved example.invalid addresses and synthetic credentials."
+  },
+  {
+    "path": "tests/test_publication.py",
+    "category": "email",
+    "line_sha256": "34c97059f56367eb89a553c3064bdec218d638563960bdf303592fa3d500e95b",
+    "reason": "Invented negative privacy/URL test input using reserved example.invalid addresses and synthetic credentials."
+  },
+  {
+    "path": "tests/test_publication.py",
+    "category": "email",
+    "line_sha256": "4d7ab49522f738751a79636282192c640eebaca7ce81fd7d2642fbc80bd9c6de",
+    "reason": "Invented negative privacy/URL test input using reserved example.invalid addresses and synthetic credentials."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "local-path",
+    "line_sha256": "a993c8bd83782a93787f839012329ef3a7b4b6f11cfa85005ffe648b99ad692c",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "local-path",
+    "line_sha256": "e5e8cf7c91153338070d7f724bcb306a551291e6424f8f5376f783e1c4f914b8",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "local-path",
+    "line_sha256": "34b7ef92a0e28e9084ac96376d9447b9ed0a93e04f58a9d11922e7116a273b59",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "email",
+    "line_sha256": "7ca0873194c8d51d0f75d71f95f101a707069264b8326aad3090231cd14654d1",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "internal-domain",
+    "line_sha256": "5458ea6965d27b24d07069d9594af104784a81c4fbd40d008427598549babede",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "login-host",
+    "line_sha256": "4dfce21ab027f7363e96b5e905de322d552ba6eaf77096106b727cfcfd8e3b8a",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "ssh-host",
+    "line_sha256": "8facb296fe21ab1fa0a3539899b375d7b468c1caeef429d91a5bdc1cd874fd75",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "ipv4",
+    "line_sha256": "652ee77f7c3e8a50589350c242d5cd1c30da92ec59257002ab5a672496b4ea1e",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "ipv6",
+    "line_sha256": "0eb296fe27d2887ce37e9768a109506e767f28760d0adb182244b9941fcd1e5d",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "4c625a8f58df370c69e90a374ab8f6de09ab5a324b803c2bc31d3a7d8a9da1b3",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "692183784b9bbb44e6b108a075d54c4fdfbfe818ff5820833e596ba182992e70",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "80ac2f31884ce65293c5800e8882384ca35c512425964d4e9a304ee43c9d56b1",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "a79824fb90ecfbce06c026bde5622a92713a70af5cd615d55e2826a16c313bbd",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "public-reference",
+    "line_sha256": "47c1f6c99f79d550e18620eaf17d0fa4805e7f2300f1b17da9c1cc44365c887f",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "internal-domain",
+    "line_sha256": "3ee3b8cfa1b792767d31b7f7d540d4b844bd5313c6632145a082da6b95f9d997",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "login-host",
+    "line_sha256": "1b67e66ea187a8facb410b69dd248b94520900bdc0bbcb565187195c22b8cf17",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "internal-domain",
+    "line_sha256": "3979e9af64786c00478a6bc216d14d34dadb4d0bf88aef96ecfb44566e7c41bc",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "e37fdfb77f4ada658e6f1995ed9879906b6973c478d13294471e5819f01dcbd1",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "email",
+    "line_sha256": "dff490f9b5cb89439f448491cb28b3d959a7f97aa72d452dd73fa2e1357da4c4",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "email",
+    "line_sha256": "848457fbd75c555d9d4e4da92c3e8ee6305989f4d4a1d1e87b8656980726d8bc",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "email",
+    "line_sha256": "0ab6d56ea6574459afb7973beba89f58d247ac3fc42da7ff0a5102dfb0923199",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "ipv4",
+    "line_sha256": "0ab6d56ea6574459afb7973beba89f58d247ac3fc42da7ff0a5102dfb0923199",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "email",
+    "line_sha256": "f4b61dba47c754d64dde8846222d2e6215412037eed1a43acb948697e1bd0100",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "email",
+    "line_sha256": "742366d26e884522b2a46673725c5673f0e2838dcc2cbef6f0d0c3a3dd396f0f",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_release_tools.py",
+    "category": "local-path",
+    "line_sha256": "742366d26e884522b2a46673725c5673f0e2838dcc2cbef6f0d0c3a3dd396f0f",
+    "reason": "Invented privacy detector regression: SYNTH paths/hosts, reserved example.invalid addresses, documentation IPs and mock data."
+  },
+  {
+    "path": "tests/test_v2.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "56451fc55f2dd887748171595f75be5bd19430b80d8afc147ae2ac728f57737a",
+    "reason": "Parser/redaction/schema test expression or synthetic value; includes fabricated negative identifier fixture-only-id and abbreviated URL prefix assertions."
+  },
+  {
+    "path": "tests/test_v2.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "17e0c5689d7e4952795cc517139beb142485bb3936b8f886ff85e61a6ad7f8b9",
+    "reason": "Parser/redaction/schema test expression or synthetic value; includes fabricated negative identifier fixture-only-id and abbreviated URL prefix assertions."
+  },
+  {
+    "path": "tests/test_v2.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "fef998c46cc4722a97d8f3839e4a96edf9b1e0999de500757ab553312e019c75",
+    "reason": "Parser/redaction/schema test expression or synthetic value; includes fabricated negative identifier fixture-only-id and abbreviated URL prefix assertions."
+  },
+  {
+    "path": "tests/test_v2.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "34cb58055f3d165747e1505b534cbaf5004cb0d96bfee93d0fe6a765cde8257f",
+    "reason": "Parser/redaction/schema test expression or synthetic value; includes fabricated negative identifier fixture-only-id and abbreviated URL prefix assertions."
+  },
+  {
+    "path": "tests/test_v2.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "29d89826885d615d3477deb9ea988c04891e2652ec364d9b262841ede5668ac5",
+    "reason": "Parser/redaction/schema test expression or synthetic value; includes fabricated negative identifier fixture-only-id and abbreviated URL prefix assertions."
+  },
+  {
+    "path": "tests/test_v2.py",
+    "category": "public-reference",
+    "line_sha256": "ffa0bcf137de65d529c42870f1a4fdf118fe5e0075ad4bb50e27d3fc871f41ed",
+    "reason": "Parser/redaction/schema test expression or synthetic value; includes fabricated negative identifier fixture-only-id and abbreviated URL prefix assertions."
+  },
+  {
+    "path": "tests/test_v2.py",
+    "category": "public-reference",
+    "line_sha256": "56cce9f4a87b6f3268edb8b134e51e3956cf23cdccd2c5b13616ac5c964b5e42",
+    "reason": "Parser/redaction/schema test expression or synthetic value; includes fabricated negative identifier fixture-only-id and abbreviated URL prefix assertions."
+  },
+  {
+    "path": "tests/test_v2.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "b16d6fb9dc4a3ec54cceb4b327cf35447c5aca3cd3dcd7398a0127447e4a4318",
+    "reason": "Parser/redaction/schema test expression or synthetic value; includes fabricated negative identifier fixture-only-id and abbreviated URL prefix assertions."
+  },
+  {
+    "path": "tests/test_v2.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "b7949df58c7d1d574f8b9a87715feed3629f17a60bf409ac27c2b1e8627da34a",
+    "reason": "Parser/redaction/schema test expression or synthetic value; includes fabricated negative identifier fixture-only-id and abbreviated URL prefix assertions."
+  },
+  {
+    "path": "tests/test_v3_scoring.py",
+    "category": "public-reference",
+    "line_sha256": "43e25125f1c070a4e6fd44d3f4a9af7f75b1fdf449a04b91df61e6bdebf63400",
+    "reason": "Synthetic barcode format test or abbreviated URL prefix assertion; no observed capture."
+  },
+  {
+    "path": "tests/test_v3_scoring.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "c1bf71e070eaaee74042f8da188091f24ecd875ea231a58ba5b4e9014b2222fb",
+    "reason": "Synthetic barcode format test or abbreviated URL prefix assertion; no observed capture."
+  },
+  {
+    "path": "tests/test_v3_scoring.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "451db12b1c256072330b21c0abe9f563b3e6b156fc78c2e87a38e0f8950530cb",
+    "reason": "Synthetic barcode format test or abbreviated URL prefix assertion; no observed capture."
+  },
+  {
+    "path": "tests/test_publication.py",
+    "category": "email",
+    "line_sha256": "74fc1eacdc5674f7d8947e7cb0e6af3abb6469d34ad3362328f892ff9814bc71",
+    "reason": "Reserved example.invalid filename in an invented privacy regression; exporter must reject and redact it."
+  },
+  {
+    "path": ".containerignore",
+    "category": "internal-domain",
+    "line_sha256": "d776ee187718033178874895482a60546c5b3bfd19eef39f13899fa373371d8c",
+    "reason": "Reviewed DTA ignored local-configuration filename pattern or exclusion regression; not an operational domain."
+  },
+  {
+    "path": ".containerignore",
+    "category": "internal-domain",
+    "line_sha256": "29eda9ea6984d8cad00a1cc9ceab194749fc839aebdb25915960f3ca81bdbd9a",
+    "reason": "Reviewed DTA ignored local-configuration filename pattern or exclusion regression; not an operational domain."
+  },
+  {
+    "path": ".gitignore",
+    "category": "internal-domain",
+    "line_sha256": "d776ee187718033178874895482a60546c5b3bfd19eef39f13899fa373371d8c",
+    "reason": "Reviewed DTA ignored local-configuration filename pattern or exclusion regression; not an operational domain."
+  },
+  {
+    "path": "README.md",
+    "category": "internal-domain",
+    "line_sha256": "b171e792c1000586540ac4afdd94b6e4da6d4278de1fdc9524a706af82a0cd79",
+    "reason": "Reviewed DTA ignored local-configuration filename pattern or exclusion regression; not an operational domain."
+  },
+  {
+    "path": "config.example.toml",
+    "category": "ipv6",
+    "line_sha256": "b23546169bba7b4fc132cd97b794023d4809a160b74b3c1b915d8ad3f94a4b77",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "config.example.toml",
+    "category": "wwn",
+    "line_sha256": "b23546169bba7b4fc132cd97b794023d4809a160b74b3c1b915d8ad3f94a4b77",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "config.example.toml",
+    "category": "public-reference",
+    "line_sha256": "708882f77745151b2ce901c7a83cadfdbcad15965a26835b014bbbd167a677f0",
+    "reason": "Reviewed reserved .invalid URL in an invented DTA configuration template; never a real endpoint."
+  },
+  {
+    "path": "docs/RUNBOOK-drive-test.md",
+    "category": "internal-domain",
+    "line_sha256": "6859a3081c6cec0bbe4fcfedc522a603dedbcbd3049ec6aa4824ae2c3e0af38c",
+    "reason": "Reviewed DTA ignored local-configuration filename pattern or exclusion regression; not an operational domain."
+  },
+  {
+    "path": "docs/RUNBOOK-drive-test.md",
+    "category": "internal-domain",
+    "line_sha256": "65065386d8e39bbe843905848922d8089383c1e273663d0283539c85deeb9385",
+    "reason": "Reviewed DTA ignored local-configuration filename pattern or exclusion regression; not an operational domain."
+  },
+  {
+    "path": "docs/RUNBOOK-drive-test.md",
+    "category": "internal-domain",
+    "line_sha256": "d6c661808d66d2f107a1f0adfe7c51a6cce7fba9b23506b1712229f76d47dabf",
+    "reason": "Reviewed DTA ignored local-configuration filename pattern or exclusion regression; not an operational domain."
+  },
+  {
+    "path": "docs/RUNBOOK-drive-test.md",
+    "category": "internal-domain",
+    "line_sha256": "e5c2ccbd850fdc5e803c0780d7f4f663c4310152c918c3348232cc3b2b79a6b9",
+    "reason": "Reviewed DTA ignored local-configuration filename pattern or exclusion regression; not an operational domain."
+  },
+  {
+    "path": "fixtures/dta/config.owner.synthetic.toml",
+    "category": "ipv6",
+    "line_sha256": "b23546169bba7b4fc132cd97b794023d4809a160b74b3c1b915d8ad3f94a4b77",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/config.owner.synthetic.toml",
+    "category": "wwn",
+    "line_sha256": "b23546169bba7b4fc132cd97b794023d4809a160b74b3c1b915d8ad3f94a4b77",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/config.owner.synthetic.toml",
+    "category": "public-reference",
+    "line_sha256": "3b4e8049e9af017657cb21da263eb54093c43fd562fa0e9586e0c4636dd261ba",
+    "reason": "Reviewed reserved .invalid URL in an invented DTA configuration template; never a real endpoint."
+  },
+  {
+    "path": "fixtures/dta/config.synthetic.toml",
+    "category": "ipv6",
+    "line_sha256": "b23546169bba7b4fc132cd97b794023d4809a160b74b3c1b915d8ad3f94a4b77",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/config.synthetic.toml",
+    "category": "wwn",
+    "line_sha256": "b23546169bba7b4fc132cd97b794023d4809a160b74b3c1b915d8ad3f94a4b77",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/config.synthetic.toml",
+    "category": "public-reference",
+    "line_sha256": "3b4e8049e9af017657cb21da263eb54093c43fd562fa0e9586e0c4636dd261ba",
+    "reason": "Reviewed reserved .invalid URL in an invented DTA configuration template; never a real endpoint."
+  },
+  {
+    "path": "fixtures/dta/switch-a.txt",
+    "category": "ipv6",
+    "line_sha256": "39adead1c6ab7335d2ab6d6d459639c9ba8d561428562c6fd45f1de05baaa04a",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-a.txt",
+    "category": "wwn",
+    "line_sha256": "39adead1c6ab7335d2ab6d6d459639c9ba8d561428562c6fd45f1de05baaa04a",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-a.txt",
+    "category": "ipv6",
+    "line_sha256": "d5dc75811c9e422102165cd73d4093dfe9b8892d36483a70e45b1291a815e98e",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-a.txt",
+    "category": "wwn",
+    "line_sha256": "d5dc75811c9e422102165cd73d4093dfe9b8892d36483a70e45b1291a815e98e",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-a.txt",
+    "category": "ipv6",
+    "line_sha256": "f80ab8641f50af2f970709290515f4455e41bcb832df398a5759cf9707d69c9a",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-a.txt",
+    "category": "wwn",
+    "line_sha256": "f80ab8641f50af2f970709290515f4455e41bcb832df398a5759cf9707d69c9a",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-a.txt",
+    "category": "ipv6",
+    "line_sha256": "7baf0764ef40df643367a8f23efecff3b2db5e11bb0e4749c4076c4e8f1925b2",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-a.txt",
+    "category": "wwn",
+    "line_sha256": "7baf0764ef40df643367a8f23efecff3b2db5e11bb0e4749c4076c4e8f1925b2",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-a.txt",
+    "category": "ipv6",
+    "line_sha256": "029022f329b4d3e6cb30add6ac344470cc619fea6e6ee5ea4652b39e6bcc44c4",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-a.txt",
+    "category": "wwn",
+    "line_sha256": "029022f329b4d3e6cb30add6ac344470cc619fea6e6ee5ea4652b39e6bcc44c4",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-a.txt",
+    "category": "ipv6",
+    "line_sha256": "7baf0764ef40df643367a8f23efecff3b2db5e11bb0e4749c4076c4e8f1925b2",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-a.txt",
+    "category": "wwn",
+    "line_sha256": "7baf0764ef40df643367a8f23efecff3b2db5e11bb0e4749c4076c4e8f1925b2",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-a.txt",
+    "category": "ipv6",
+    "line_sha256": "ca6fd8d89ddad1b1832f27c909df92156190017dce48bb1e9e6ad297003ffd83",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-a.txt",
+    "category": "wwn",
+    "line_sha256": "ca6fd8d89ddad1b1832f27c909df92156190017dce48bb1e9e6ad297003ffd83",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-b.txt",
+    "category": "ipv6",
+    "line_sha256": "3abe90c0c5d6a71e488d259e7782a6451204c175aabcfc5402d8dc464d300597",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-b.txt",
+    "category": "wwn",
+    "line_sha256": "3abe90c0c5d6a71e488d259e7782a6451204c175aabcfc5402d8dc464d300597",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-b.txt",
+    "category": "ipv6",
+    "line_sha256": "fa83c639d4424e3dcdba1ff8cbd3b4d8940ee1891ac6e717bb5a2eb373545edc",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-b.txt",
+    "category": "wwn",
+    "line_sha256": "fa83c639d4424e3dcdba1ff8cbd3b4d8940ee1891ac6e717bb5a2eb373545edc",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-b.txt",
+    "category": "ipv6",
+    "line_sha256": "8d778d554c37662ab08011d920ad9e78750a62d6ebad1a06f4f21979eae4cd12",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-b.txt",
+    "category": "wwn",
+    "line_sha256": "8d778d554c37662ab08011d920ad9e78750a62d6ebad1a06f4f21979eae4cd12",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-b.txt",
+    "category": "ipv6",
+    "line_sha256": "2a8c3a64500873eccc9b597a564740c44d61cf51adda0ee8eff8583a13205f89",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-b.txt",
+    "category": "wwn",
+    "line_sha256": "2a8c3a64500873eccc9b597a564740c44d61cf51adda0ee8eff8583a13205f89",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-b.txt",
+    "category": "ipv6",
+    "line_sha256": "3cd1d641cd0d5c74642698f5afdde34c2a875762f78aaac0e0805f2fd446375d",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-b.txt",
+    "category": "wwn",
+    "line_sha256": "3cd1d641cd0d5c74642698f5afdde34c2a875762f78aaac0e0805f2fd446375d",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-b.txt",
+    "category": "ipv6",
+    "line_sha256": "2a8c3a64500873eccc9b597a564740c44d61cf51adda0ee8eff8583a13205f89",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-b.txt",
+    "category": "wwn",
+    "line_sha256": "2a8c3a64500873eccc9b597a564740c44d61cf51adda0ee8eff8583a13205f89",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-b.txt",
+    "category": "ipv6",
+    "line_sha256": "98ecef8456929450ed036fd69014a47e1f928e33cf1348112b5fa8093c01f412",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "fixtures/dta/switch-b.txt",
+    "category": "wwn",
+    "line_sha256": "98ecef8456929450ed036fd69014a47e1f928e33cf1348112b5fa8093c01f412",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "scripts/audit-identifiers.py",
+    "category": "ipv6",
+    "line_sha256": "78aa63673908516fe1b4616c4fac3803144a524bbdc3ca7d7b83ca0f0f5da4ee",
+    "reason": "Reviewed source-expression false positive: hardware identifier detector regex, not an address."
+  },
+  {
+    "path": "tapediag/dta_plan.py",
+    "category": "ipv6",
+    "line_sha256": "2626473b1ab0aade5f4e48631d564c0147d645feedbcc4df8db260a9a64742e4",
+    "reason": "Reviewed command-plan display separator (double colon) in implementation/assertion; not an address."
+  },
+  {
+    "path": "tapediag/dta_vendor.py",
+    "category": "device-identifier-candidate",
+    "line_sha256": "5b35c829bff460eab8e13f63611a6db44ef4f20a3066fd6e8106214461503b5a",
+    "reason": "Reviewed parser regex named serial capture, not a captured serial value."
+  },
+  {
+    "path": "tests/test_dta_engine.py",
+    "category": "ipv6",
+    "line_sha256": "af7d8cabfa186d932a099df4e461e138146439f0cf9cd81a329b98530a8c030e",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_engine.py",
+    "category": "wwn",
+    "line_sha256": "af7d8cabfa186d932a099df4e461e138146439f0cf9cd81a329b98530a8c030e",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_plan_config.py",
+    "category": "ipv6",
+    "line_sha256": "df61afca1b2572731d32fa2c2cccc6a4898897897a89f6deb962d090b9049a64",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_plan_config.py",
+    "category": "wwn",
+    "line_sha256": "df61afca1b2572731d32fa2c2cccc6a4898897897a89f6deb962d090b9049a64",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_plan_config.py",
+    "category": "public-reference",
+    "line_sha256": "0f1e920f68d6e9b38dbf20439c469abaedb2617ae162a9632566507a55857dae",
+    "reason": "Reviewed synthetic .invalid URL validation/redirect negative test; values are literal invented fixture data."
+  },
+  {
+    "path": "tests/test_dta_plan_config.py",
+    "category": "public-reference",
+    "line_sha256": "94222027570643b8281b20fa18fb21ee5803c2fc1c06f2a567d52ac3304bfabc",
+    "reason": "Reviewed synthetic .invalid URL validation/redirect negative test; values are literal invented fixture data."
+  },
+  {
+    "path": "tests/test_dta_plan_config.py",
+    "category": "email",
+    "line_sha256": "2394b3bdb5f7b32774237266a670c9bb519343d17f3e49156e3595c7ea97fb5e",
+    "reason": "Reviewed synthetic .invalid URL validation/redirect negative test; values are literal invented fixture data."
+  },
+  {
+    "path": "tests/test_dta_plan_config.py",
+    "category": "public-reference",
+    "line_sha256": "2394b3bdb5f7b32774237266a670c9bb519343d17f3e49156e3595c7ea97fb5e",
+    "reason": "Reviewed synthetic .invalid URL validation/redirect negative test; values are literal invented fixture data."
+  },
+  {
+    "path": "tests/test_dta_plan_config.py",
+    "category": "public-reference",
+    "line_sha256": "b8cd440c9db8524c147e23b62378f54ccc0c639a44cb84e1f038d4b46b08aa58",
+    "reason": "Reviewed synthetic .invalid URL validation/redirect negative test; values are literal invented fixture data."
+  },
+  {
+    "path": "tests/test_dta_plan_config.py",
+    "category": "public-reference",
+    "line_sha256": "69ef60c8460aa7b4a8eb743336ee1240275ed13542390702315b319a4355a76c",
+    "reason": "Reviewed synthetic .invalid URL validation/redirect negative test; values are literal invented fixture data."
+  },
+  {
+    "path": "tests/test_dta_plan_config.py",
+    "category": "public-reference",
+    "line_sha256": "1385cc8aa06520f6a3ffca2b6b2ddcf035709f9c7d6b91f5a8346f43df200a01",
+    "reason": "Reviewed synthetic .invalid URL validation/redirect negative test; values are literal invented fixture data."
+  },
+  {
+    "path": "tests/test_dta_plan_config.py",
+    "category": "ipv6",
+    "line_sha256": "f93270f720b6329b5ecdcde7b7b755c7e7398b9ea03e8611573b40667ac76d6c",
+    "reason": "Reviewed command-plan display separator (double colon) in implementation/assertion; not an address."
+  },
+  {
+    "path": "tests/test_dta_plan_config.py",
+    "category": "ipv6",
+    "line_sha256": "4737eaf6a94e63fb7d2b6cc2d0aa6b4bb8f146d0546aff830cfec0d4fbe3cbec",
+    "reason": "Reviewed command-plan display separator (double colon) in implementation/assertion; not an address."
+  },
+  {
+    "path": "tests/test_dta_transport_storage.py",
+    "category": "public-reference",
+    "line_sha256": "5912d9c4799cd269046c674b260526674af97d12ba2754e6233010e94de8f651",
+    "reason": "Reviewed synthetic .invalid URL validation/redirect negative test; values are literal invented fixture data."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "ipv4",
+    "line_sha256": "f8ee6332780237e26dfecbc35bded081f47ef5f8f3427164701504f20b8c8c54",
+    "reason": "Reviewed dotted ITDT version grammar negative test, not an IPv4 endpoint."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "ipv6",
+    "line_sha256": "d3d136497db9143181b26f486ef84b260f611b80cc89ac9dce7cd971c738abc3",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "wwn",
+    "line_sha256": "d3d136497db9143181b26f486ef84b260f611b80cc89ac9dce7cd971c738abc3",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "ipv6",
+    "line_sha256": "046fcc45bc373c61c9ac5c4d46c58dedfef8af7ac3719a117c8050d75a83ac9d",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "wwn",
+    "line_sha256": "046fcc45bc373c61c9ac5c4d46c58dedfef8af7ac3719a117c8050d75a83ac9d",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "ipv6",
+    "line_sha256": "8c950f858bbf8bf31e89718f8cf00185e8fa802738e636e2fa401c700ac682fd",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "wwn",
+    "line_sha256": "8c950f858bbf8bf31e89718f8cf00185e8fa802738e636e2fa401c700ac682fd",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "ipv6",
+    "line_sha256": "33800696904e78d386f49fe52c06634ecc78d7b7de3427dfd9ec5fb3753cb2db",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "wwn",
+    "line_sha256": "33800696904e78d386f49fe52c06634ecc78d7b7de3427dfd9ec5fb3753cb2db",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "ipv6",
+    "line_sha256": "14d485178fac78e8e8c315e3ec74ee930c824e36bd30ae26b9d1e7cfbe113914",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "wwn",
+    "line_sha256": "14d485178fac78e8e8c315e3ec74ee930c824e36bd30ae26b9d1e7cfbe113914",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "ipv6",
+    "line_sha256": "036ee2da2c6981f98a3d039d0f1bbb5232a987eb85f07b51008bdab4d2652437",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "wwn",
+    "line_sha256": "036ee2da2c6981f98a3d039d0f1bbb5232a987eb85f07b51008bdab4d2652437",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "ipv6",
+    "line_sha256": "a9726df7f838837d3022492da207518a3d7790ea33b270fec225eaa4c182e549",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "wwn",
+    "line_sha256": "a9726df7f838837d3022492da207518a3d7790ea33b270fec225eaa4c182e549",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "ipv6",
+    "line_sha256": "ff6025d501fb133a7c7006d5c71ad3a3f8640c5b0abee3057b1bb0be9ee2f729",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_dta_vendor.py",
+    "category": "wwn",
+    "line_sha256": "ff6025d501fb133a7c7006d5c71ad3a3f8640c5b0abee3057b1bb0be9ee2f729",
+    "reason": "Reviewed original synthetic DTA fixture/assertion in the all-zero fictional WWPN namespace; no device capture."
+  },
+  {
+    "path": "tests/test_provenance.py",
+    "category": "ipv6",
+    "line_sha256": "92e101ab3005f99dfc63eadfa80ef491a8908ef0b38034881a03a350d955c2b9",
+    "reason": "Reviewed source-expression false positive: hardware identifier detector regex, not an address."
+  },
+  {
+    "path": "tests/test_publication.py",
+    "category": "internal-domain",
+    "line_sha256": "6264661d9cb459f6c9a91b4eaff0c833b3270ea1e064f82d9685ecd56940ba00",
+    "reason": "Reviewed DTA ignored local-configuration filename pattern or exclusion regression; not an operational domain."
+  },
+  {
+    "path": "tests/sweep/test_guards.py",
+    "category": "public-reference",
+    "line_sha256": "39ddbef8a70a2d6120067cc4bcda43078781aca38809977e44f87605e098bcfc",
+    "reason": "Synthetic XML external-entity refusal test; reserved example.invalid URL, never fetched."
+  }
+]

@@ -1,0 +1,6 @@
+expat-2.8.5-1.fc44.x86_64
+mpdecimal-4.0.1-3.fc44.x86_64
+python-pip-wheel-26.0.1-3.fc44.noarch
+python3-3.14.8-1.fc44.x86_64
+python3-libs-3.14.8-1.fc44.x86_64
+python3-pip-26.0.1-3.fc44.noarch

@@ -1,0 +1,27 @@
+Supported log pages [0x0]:
+  0x00 Supported log pages
+  0x02 Write error counter
+  0x03 Read error counter
+  0x0c Sequential access device
+  0x0d Temperature
+  0x14 Device statistics
+  0x17 Volume statistics
+  0x2e Tape alert
+Write error counter page [0x2]:
+  Errors corrected without substantial delay = 12
+  Total uncorrected errors = 0
+Read error counter page [0x3]:
+  Total times correction algorithm processed = 7
+  Total uncorrected errors = 1
+Sequential access device log page [0xc]:
+  Data bytes received with WRITE commands = 9000000
+  Data bytes read with READ commands = 12000000
+Temperature log page [0xd]:
+  Current temperature = 29 C
+  Reference temperature = 60 C
+Device statistics log page [0x14]:
+  Lifetime media loads = 42
+Volume statistics log page [0x17]:
+  Page valid = 1
+  Total native capacity in megabytes = 12000000
+  Total used native capacity in megabytes = 4000000

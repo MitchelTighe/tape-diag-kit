@@ -1,0 +1,3 @@
+Sequential-access device log page [0x0c]:
+  Data bytes received with WRITE commands = 2400000
+  Data bytes read with READ commands = 4800000

@@ -1,0 +1,5 @@
+Storage Changer /dev/sg40:1 Drives, 3 Slots ( 1 Import/Export )
+Data Transfer Element 0:Full (Storage Element 1 Loaded):VolumeTag=SYNTH-V4-A
+Storage Element 1:Empty
+Storage Element 2:Full :VolumeTag=SYNTH-V4-B
+Storage Element 3 IMPORT/EXPORT:Empty

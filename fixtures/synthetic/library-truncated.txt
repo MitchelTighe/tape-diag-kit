@@ -1,0 +1,3 @@
+Storage Changer /dev/sg10:2 Drives, 4 Slots ( 1 Import/Export )
+Data Transfer Element 0:Empty
+Storage Element 1:Full :VolumeTag=SYN002L8

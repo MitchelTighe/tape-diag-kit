@@ -1,0 +1,530 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "0.1.0",
+  "mode": "offline",
+  "inventory": {
+    "source": "lsscsi",
+    "devices": [
+      {
+        "kind": "drive",
+        "address": "9:0:1:0",
+        "vendor": "SYNTH",
+        "model": "LTO-DEMO DRIVE",
+        "revision": "0001",
+        "device": "/dev/st0",
+        "generic_device": "/dev/sg9",
+        "nonrewinding_device": "/dev/nst0"
+      },
+      {
+        "kind": "changer",
+        "address": "9:0:2:0",
+        "vendor": "SYNTH",
+        "model": "CHANGER-DEMO",
+        "revision": "0001",
+        "device": "/dev/sch0",
+        "generic_device": "/dev/sg10",
+        "nonrewinding_device": null
+      }
+    ],
+    "warnings": []
+  },
+  "drives": [
+    {
+      "device": "/dev/sg9",
+      "tapealert": {
+        "page": "0x2e",
+        "profile": "SSC sequential-access; T10/05-154r2 table x+2 (historical public proposal)",
+        "sources": [
+          "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+          "https://www.ibm.com/docs/en/ts4500-tape-library?topic=flags-tapealert-supported-by-lto-tape-drives",
+          "https://support.hpe.com/hpesc/public/docDisplay?docId=sd00006909en_us&docLocale=en_US&page=GUID-D7147C7F-2016-0901-0922-0000000005A5.html"
+        ],
+        "active_flags": [
+          {
+            "flag": 3,
+            "name": "Hard error",
+            "severity": "Warning",
+            "action": "Check flags 4, 5 and 6 to narrow the failure.",
+            "defined": true,
+            "active": true
+          },
+          {
+            "flag": 4,
+            "name": "Media",
+            "severity": "Critical",
+            "action": "Preserve readable data under your recovery procedure and retire faulty media.",
+            "defined": true,
+            "active": true
+          },
+          {
+            "flag": 5,
+            "name": "Read failure",
+            "severity": "Critical",
+            "action": "Investigate media and drive; preserve the original cartridge for recovery.",
+            "defined": true,
+            "active": true
+          },
+          {
+            "flag": 20,
+            "name": "Clean now",
+            "severity": "Critical",
+            "action": "Arrange an approved cleaning cycle with compatible cleaning media.",
+            "defined": true,
+            "active": true
+          }
+        ],
+        "observed_flags": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "inactive_flags": [
+          1,
+          2,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "unobserved_flags": [],
+        "unknown_flags": [],
+        "warnings": []
+      },
+      "logpages": {
+        "pages": [
+          {
+            "page": "0x00",
+            "subpage": null,
+            "name": "Supported log pages",
+            "known": true,
+            "parameters": [],
+            "supported_pages": [
+              {
+                "page": "0x00",
+                "subpage": null,
+                "name": "Supported log pages"
+              },
+              {
+                "page": "0x02",
+                "subpage": null,
+                "name": "Write error counter"
+              },
+              {
+                "page": "0x03",
+                "subpage": null,
+                "name": "Read error counter"
+              },
+              {
+                "page": "0x0c",
+                "subpage": null,
+                "name": "Sequential access device"
+              },
+              {
+                "page": "0x0d",
+                "subpage": null,
+                "name": "Temperature"
+              },
+              {
+                "page": "0x14",
+                "subpage": null,
+                "name": "Device statistics"
+              },
+              {
+                "page": "0x17",
+                "subpage": null,
+                "name": "Volume statistics"
+              },
+              {
+                "page": "0x2e",
+                "subpage": null,
+                "name": "Tape alert"
+              }
+            ],
+            "raw_lines": []
+          },
+          {
+            "page": "0x02",
+            "subpage": null,
+            "name": "Write error counter page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Errors corrected without substantial delay",
+                "value": 12,
+                "unit": null,
+                "raw": "12"
+              },
+              {
+                "name": "Total uncorrected errors",
+                "value": 0,
+                "unit": null,
+                "raw": "0"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x03",
+            "subpage": null,
+            "name": "Read error counter page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Total times correction algorithm processed",
+                "value": 7,
+                "unit": null,
+                "raw": "7"
+              },
+              {
+                "name": "Total uncorrected errors",
+                "value": 1,
+                "unit": null,
+                "raw": "1"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x0c",
+            "subpage": null,
+            "name": "Sequential access device log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Data bytes received with WRITE commands",
+                "value": 9000000,
+                "unit": null,
+                "raw": "9000000"
+              },
+              {
+                "name": "Data bytes read with READ commands",
+                "value": 12000000,
+                "unit": null,
+                "raw": "12000000"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x0d",
+            "subpage": null,
+            "name": "Temperature log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Current temperature",
+                "value": 29,
+                "unit": "C",
+                "raw": "29 C"
+              },
+              {
+                "name": "Reference temperature",
+                "value": 60,
+                "unit": "C",
+                "raw": "60 C"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x14",
+            "subpage": null,
+            "name": "Device statistics log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Lifetime media loads",
+                "value": 42,
+                "unit": null,
+                "raw": "42"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x17",
+            "subpage": null,
+            "name": "Volume statistics log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Page valid",
+                "value": 1,
+                "unit": null,
+                "raw": "1"
+              },
+              {
+                "name": "Total native capacity in megabytes",
+                "value": 12000000,
+                "unit": null,
+                "raw": "12000000"
+              },
+              {
+                "name": "Total used native capacity in megabytes",
+                "value": 4000000,
+                "unit": null,
+                "raw": "4000000"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          }
+        ],
+        "preamble": [],
+        "warnings": []
+      },
+      "drive_status": {
+        "vendor": "SYNTH",
+        "product": "LTO-DEMO",
+        "revision": "0001",
+        "density": 93,
+        "density_description": "LTO-8",
+        "block_size": 0,
+        "file_number": 2,
+        "block_number": 17,
+        "online": true,
+        "write_protect": true,
+        "ready": true,
+        "status_flags": [
+          "BOT",
+          "ONLINE",
+          "WR_PROT"
+        ],
+        "warnings": [
+          "block size 0 means variable-length blocks"
+        ]
+      }
+    }
+  ],
+  "libraries": [
+    {
+      "device": "/dev/sg10",
+      "status": {
+        "device": "/dev/sg10",
+        "reported_drives": 2,
+        "reported_slots": 4,
+        "reported_ie_ports": 1,
+        "drives": [
+          {
+            "element": 0,
+            "full": true,
+            "barcode": "SYN001L8",
+            "alternate_barcode": null,
+            "source_slot": 2
+          },
+          {
+            "element": 1,
+            "full": false,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          }
+        ],
+        "slots": [
+          {
+            "element": 1,
+            "full": true,
+            "barcode": "SYN002L8",
+            "alternate_barcode": "SYNALT01",
+            "source_slot": null
+          },
+          {
+            "element": 2,
+            "full": false,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 3,
+            "full": true,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          }
+        ],
+        "ie_ports": [
+          {
+            "element": 4,
+            "full": true,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          }
+        ],
+        "warnings": []
+      }
+    }
+  ],
+  "ltfs": {
+    "devices": [
+      {
+        "device": "/dev/sg9",
+        "vendor": "SYNTH",
+        "product": "LTO-DEMO",
+        "serial": "SYNTH-DRIVE-0001",
+        "product_name": "[LTO-DEMO]"
+      }
+    ],
+    "ltfsck": "skipped: no checker or repair command is allowlisted",
+    "warnings": []
+  },
+  "itdt": {
+    "adapter": "IBM ITDT saved text only",
+    "devices": [
+      {
+        "index": 0,
+        "device": "/dev/IBMtape0n",
+        "model": "LTO-DEMO",
+        "revision": "0001",
+        "serial": "SYNTH-DRIVE-0001",
+        "address": "9:0:1:0",
+        "driver": "IBM-Device"
+      },
+      {
+        "index": 1,
+        "device": "/dev/sg10",
+        "model": "CHANGER-DEMO",
+        "revision": "0001",
+        "serial": "SYNTH-CHANGER-0001",
+        "address": "9:0:2:0",
+        "driver": "Generic-Device"
+      }
+    ],
+    "inquiry": {
+      "vendor": null,
+      "product": null,
+      "revision": null
+    },
+    "tapealert": null,
+    "warnings": [],
+    "raw_lines": [
+      "Scanning SCSI Bus ...",
+      "#0 /dev/IBMtape0n - [LTO-DEMO]-[0001] S/N:SYNTH-DRIVE-0001 H9-B0-T1-L0  (IBM-Device)",
+      "#1 /dev/sg10 - [CHANGER-DEMO]-[0001] S/N:SYNTH-CHANGER-0001 H9-B0-T2-L0  (Generic-Device)",
+      "Exit with code: 0"
+    ]
+  },
+  "commands": [],
+  "errors": []
+}

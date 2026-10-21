@@ -1,0 +1,3 @@
+[9:0:1:0]    tape    SYNTH    LTO-DEMO DRIVE    0001  /dev/st0    /dev/sg31
+[9:0:2:0]    mediumx SYNTH    CHANGER-DEMO      0001  /dev/sch0   /dev/sg40
+[9:0:3:0]    disk    SYNTH    DISK-DEMO         0001  /dev/sdz    /dev/sg72

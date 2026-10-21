@@ -1,0 +1,3 @@
+Vendor identification: SYNTH
+Product identification: SYNTH-DIAG-DRIVE
+Product revision level: S027

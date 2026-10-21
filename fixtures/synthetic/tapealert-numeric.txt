@@ -1,0 +1,9 @@
+TapeAlert Flag 3: set
+Flag 4: 1
+Parameter code 0x05 = true
+Flag 20: 1
+Flag 65: 1
+Flag 0: 0
+Flag 61: 1
+Flag 3: 0
+Flag 6: banana

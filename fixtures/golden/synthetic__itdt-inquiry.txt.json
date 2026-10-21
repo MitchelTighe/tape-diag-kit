@@ -1,0 +1,17 @@
+{
+  "adapter": "IBM ITDT saved text only",
+  "devices": [],
+  "inquiry": {
+    "vendor": "SYNTH",
+    "product": "LTO-DEMO",
+    "revision": "0001"
+  },
+  "tapealert": null,
+  "warnings": [],
+  "raw_lines": [
+    "INQUIRY:",
+    "Manufacturer: SYNTH",
+    "Product Identification: LTO-DEMO",
+    "Revision Level: 0001"
+  ]
+}

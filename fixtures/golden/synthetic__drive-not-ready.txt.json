@@ -1,0 +1,19 @@
+{
+  "vendor": "SYNTH",
+  "product": "LTO-DEMO",
+  "revision": "0001",
+  "density": 93,
+  "density_description": "LTO-8",
+  "block_size": 262144,
+  "file_number": -1,
+  "block_number": -1,
+  "online": false,
+  "write_protect": false,
+  "ready": false,
+  "status_flags": [
+    "DR_OPEN"
+  ],
+  "warnings": [
+    "position -1 means unavailable, not a valid media position"
+  ]
+}

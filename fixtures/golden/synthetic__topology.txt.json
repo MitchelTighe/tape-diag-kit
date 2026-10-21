@@ -1,0 +1,18 @@
+{
+  "source": "sg_map -x",
+  "mappings": [
+    {
+      "generic_device": "/dev/sg9",
+      "address": "9:0:1:0",
+      "kind": "drive",
+      "device": "/dev/st0"
+    },
+    {
+      "generic_device": "/dev/sg10",
+      "address": "9:0:2:0",
+      "kind": "changer",
+      "device": "/dev/sch0"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,15 @@
+{
+  "vendor": "SYNTH",
+  "product": "SYNTH-DIAG-DRIVE",
+  "revision": "S027",
+  "density": null,
+  "density_description": null,
+  "block_size": null,
+  "file_number": null,
+  "block_number": null,
+  "online": null,
+  "write_protect": null,
+  "ready": null,
+  "status_flags": [],
+  "warnings": []
+}

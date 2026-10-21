@@ -1,0 +1,8 @@
+<driveList><drive>
+  <ID>FR1/DBA1/fLTO-DRV1</ID><driveStatus>OK</driveStatus>
+  <partition>SYNTH TEST</partition><partitionDriveNumber>1</partitionDriveNumber>
+  <driveType>IBM Ultrium-TD9</driveType>
+  <serialNumber>SYNTH-DRIVE-DTA</serialNumber>
+  <manufacturerSerialNumber>SYNTH-PHYSICAL-DTA</manufacturerSerialNumber>
+  <driveFirmware>SYN1</driveFirmware><wwn>0000000000000001</wwn>
+</drive></driveList>

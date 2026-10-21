@@ -1,0 +1,30 @@
+{
+  "device": "/dev/sg10",
+  "reported_drives": 2,
+  "reported_slots": 4,
+  "reported_ie_ports": 1,
+  "drives": [
+    {
+      "element": 0,
+      "full": false,
+      "barcode": null,
+      "alternate_barcode": null,
+      "source_slot": null
+    }
+  ],
+  "slots": [
+    {
+      "element": 1,
+      "full": true,
+      "barcode": "SYN002L8",
+      "alternate_barcode": null,
+      "source_slot": null
+    }
+  ],
+  "ie_ports": [],
+  "warnings": [
+    "drive count differs from header; capture may be truncated",
+    "storage count differs from header; slots include IE ports",
+    "IE port count differs from header"
+  ]
+}

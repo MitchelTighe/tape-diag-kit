@@ -1,0 +1,33 @@
+# Command reference and public sources
+
+All forms below are exact argv templates. `N` is a decimal device index. The implementation never passes unrecognized arguments to an underlying program. `--execute` must be explicit; every process has the configured timeout. `--from-file` bypasses the command boundary entirely.
+
+| tapediag command | Wrapped command(s) | What is read | Public upstream documentation |
+| --- | --- | --- | --- |
+| `inventory` | `lsscsi -g` | Cached kernel SCSI identity, device type, primary node and generic-node mapping; filters tape and medium changer entries. | [lsscsi utility, overview and generic option](https://doug-gilbert.github.io/scsi/lsscsi.html) |
+| `inventory --source sysfs` | None | `/sys/class/scsi_tape/stN/device` and `/sys/class/scsi_generic/sgN/device`: cached type 1/8, vendor/model/rev, class links. No device-node reads. | [Linux tape driver](https://www.kernel.org/doc/html/latest/scsi/st.html), [Linux SG driver mapping](https://doug-gilbert.github.io/sg_v40.html) |
+| `tapealert /dev/sgN` | `sg_logs --readonly --page=0x2e /dev/sgN` | SSC drive TapeAlert flags 1–64. It does not apply SMC changer flag meanings. | [sg_logs upstream man page](https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8), [public SSC TapeAlert proposal](https://www.t10.org/ftp/t10/document.05/05-154r2.pdf) |
+| `logpages /dev/sgN` | `sg_logs --readonly --page=PAGE /dev/sgN` for `0x00`, `0x02`, `0x03`, `0x06`, `0x0c`, `0x0d`, `0x0e`, `0x12`, `0x14`, `0x17` | Supported pages, write/read counters, sequential-access byte counters, temperature, device statistics and volume statistics. | [sg_logs man page](https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8), [HPE standard volume statistics 17h](https://support.hpe.com/hpesc/public/docDisplay?docId=sd00006909en_us&docLocale=en_US&page=GUID-D7147C7F-2016-0901-0922-00000000059A.html) |
+| `drive-status /dev/sgN --nst /dev/nstM` | `sg_inq /dev/sgN`; `sg_turs /dev/sgN`; `mt -f /dev/nstM status` | Standard inquiry; one TEST UNIT READY result; tape density, block size, file/block position and generic status bits. | [sg_inq man page](https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_inq.8), [sg_turs man page](https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_turs.8), [mt-st man page](https://github.com/iustin/mt-st/blob/master/mt.1), [st(4)](https://man7.org/linux/man-pages/man4/st.4.html) |
+| `library /dev/sgN` | `mtx -f /dev/sgN status` | Changer element status, occupied/empty drives, storage slots, IE ports, source storage element and volume tags. | [mtx man page](https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1), [historical output example](https://github.com/mtx-org/mtx/blob/master/mtx/mtx.doc) |
+| `ltfs /dev/sgN` | `ltfs -o device_list` | Global LTFS device enumeration only, filtered locally to the requested node. No tape filesystem is mounted. | [LTFS upstream quickstart](https://github.com/LinearTapeFileSystem/ltfs/blob/main/README.md), [upstream ltfs man page](https://github.com/LinearTapeFileSystem/ltfs/blob/master/man/ltfs.8) |
+| `itdt --from-file PATH` | None | Saved default scan grammar, labeled inquiry fields, numeric/named TapeAlert observations. Original lines are retained. | [IBM ITDT public guide, scan and inquiry sections](https://www.ibm.com/support/pages/system/files/inline-files/IBM%20Tape%20Device%20Drivers%20and%20Diagnostic%20Tool%20Users%20Guide.pdf), [earlier public guide](https://www.ibm.com/support/pages/system/files/inline-files/%24FILE/GC27-2130-23_0.pdf) |
+| `report` | Inventory, drive-status, TapeAlert, logpages, changer status, LTFS listing | One schema-versioned result with per-command failures. ITDT input is offline only. | The command references above; [report schema](../schema/tapediag-report.v1.json) |
+
+`mtx -f /dev/sgN inquiry` is additionally accepted at the Python runner boundary because it is a read-only identity operation. The current `library` CLI plans `status` only. No other `mtx` command is accepted. In particular, `inventory` operates the robot and is excluded.
+
+The runner uses `sg_logs --readonly` explicitly. Neither `--select`, `--reset`, nor `--sp` is allowed: those can select/reset/save log parameters. `sg_inq` and `sg_turs` use their documented default read diagnostic operations with no caller options. An allowlisted executable may itself open a device read/write (notably mtx); the toolkit constrains its operations, rather than claiming every utility uses `O_RDONLY`.
+
+The supported-page list is collected alongside the other standard pages; each selected page is attempted once even if omitted from that list. Firmware may not support all pages. Failures are recorded without substituting vendor-specific commands. Page `0x17` means SSC volume statistics here, not the SBC disk nonvolatile-cache interpretation. Temperature values such as `<not available>` become `null`; raw value text is retained.
+
+`mt` requires mt-st style status output. Block size 0 means variable blocks. Position -1 is unavailable. ONLINE describes the driver's online bit; it is distinct from the TEST UNIT READY result. TUR exit 0 means ready, 2 means not ready, and other statuses leave readiness unknown while preserving the error. A textual status capture without an authoritative bitfield cannot establish that an absent write-protect token means writable.
+
+Reading TapeAlert can deactivate flags depending on device generation/configuration. See the [T10 public proposal, background and polling discussion](https://www.t10.org/ftp/t10/document.05/05-154r2.pdf). The toolkit never changes TAPLSD, mode pages, or device configuration to alter that behavior.
+
+LTFS checking is deliberately skipped: no portable, verified report-only checker flag is assumed. `ltfsck` (including repair), `mkltfs`, mounting, recovery, and LTFS index writes are outside the allowlist. A device listing cannot establish that a tape has a valid LTFS filesystem.
+
+The ITDT adapter parses text, never executable instructions. Paths and words in a saved ITDT report are data. The public numeric TapeAlert profile is shared with the other parser; ITDT report variations with no supported records produce a warning. No read/write diagnostic, firmware operation, dump acquisition, or ITDT executable is invoked.
+
+## v2 additions
+
+Exact `mam` (`sg_read_attr`), `inquiry` (VPD 80h/83h), `topology` (`sg_map -x`), extended log pages, attribute IDs, redaction and all health/consistency rules are documented with public references in [v2 diagnostics](v2-diagnostics.md). The [guided workflow](guided.md) documents prerequisites, durations, confirmation and resumable v2 transcripts. [HTML usage](../README.md#self-contained-html) covers saved v1/v2 input and offline rendering.

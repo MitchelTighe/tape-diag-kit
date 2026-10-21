@@ -1,0 +1,7 @@
+  Storage Changer /dev/sg10:2 Drives, 4 Slots ( 1 Import/Export )
+Data Transfer Element 0:Full (Storage Element 2 Loaded):VolumeTag = SYN001L8
+Data Transfer Element 1:Empty
+      Storage Element 1:Full :VolumeTag=SYN002L8:AlternateVolumeTag=SYNALT01
+      Storage Element 2:Empty
+      Storage Element 3:Full
+      Storage Element 4 IMPORT/EXPORT:Full :VolumeTag=

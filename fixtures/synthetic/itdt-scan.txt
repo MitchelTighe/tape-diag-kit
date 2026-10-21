@@ -1,0 +1,4 @@
+Scanning SCSI Bus ...
+#0 /dev/IBMtape0n - [LTO-DEMO]-[0001] S/N:SYNTH-DRIVE-0001 H9-B0-T1-L0  (IBM-Device)
+#1 /dev/sg10 - [CHANGER-DEMO]-[0001] S/N:SYNTH-CHANGER-0001 H9-B0-T2-L0  (Generic-Device)
+Exit with code: 0

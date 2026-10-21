@@ -1,0 +1,9 @@
+ARG DISTRO_IMAGE=registry.fedoraproject.org/fedora:44@sha256:cd3513b19e87220eb6fba1aeb041cf88f9c00c3b1de213c36db7532c383f4a1c
+FROM ${DISTRO_IMAGE}
+# Full transaction pinned, including dependencies. No mhvtl packages/services.
+ARG RPM_LOCK=requirements-fedora-rpm.txt
+COPY ${RPM_LOCK} /checks/rpm-lock.txt
+RUN test -s /checks/rpm-lock.txt && xargs dnf -y --setopt=install_weak_deps=False install < /checks/rpm-lock.txt && dnf clean all
+ENV PYTHONDONTWRITEBYTECODE=1 PIP_DISABLE_PIP_VERSION_CHECK=1
+WORKDIR /work
+CMD ["sh", "/input/scripts/check-distro.sh"]

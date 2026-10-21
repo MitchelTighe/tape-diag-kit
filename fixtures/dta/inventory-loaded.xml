@@ -1,0 +1,4 @@
+<inventory><partition><name>SYNTH TEST</name>
+  <storageSlot><id>4102</id><offset>7</offset><full>no</full></storageSlot>
+  <drive><id>256</id><offset>1</offset><barcode>SYNTH-TEST-L9</barcode><sourceSlot>4102</sourceSlot><sourceOffset>7</sourceOffset><isQueued>no</isQueued><full>yes</full></drive>
+</partition></inventory>

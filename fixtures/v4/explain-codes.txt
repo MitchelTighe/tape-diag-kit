@@ -1,0 +1,7 @@
+# Original lookup examples, not a hardware capture
+tapealert:20
+sense:2/3a/00
+asc:29/00
+page:0x31
+density:0x5e
+asc:ff/ff

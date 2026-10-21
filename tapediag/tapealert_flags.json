@@ -1,0 +1,458 @@
+{
+  "profile": "SSC sequential-access; T10/05-154r2 table x+2 (historical public proposal)",
+  "sources": [
+    "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+    "https://www.ibm.com/docs/en/ts4500-tape-library?topic=flags-tapealert-supported-by-lto-tape-drives",
+    "https://support.hpe.com/hpesc/public/docDisplay?docId=sd00006909en_us&docLocale=en_US&page=GUID-D7147C7F-2016-0901-0922-0000000005A5.html"
+  ],
+  "flags": [
+    {
+      "flag": 1,
+      "name": "Read warning",
+      "severity": "Warning",
+      "action": "Check read-error trends; isolate media and drive with approved procedures.",
+      "defined": true
+    },
+    {
+      "flag": 2,
+      "name": "Write warning",
+      "severity": "Warning",
+      "action": "Review write-error trends and media condition before the next job.",
+      "defined": true
+    },
+    {
+      "flag": 3,
+      "name": "Hard error",
+      "severity": "Warning",
+      "action": "Check flags 4, 5 and 6 to narrow the failure.",
+      "defined": true
+    },
+    {
+      "flag": 4,
+      "name": "Media",
+      "severity": "Critical",
+      "action": "Preserve readable data under your recovery procedure and retire faulty media.",
+      "defined": true
+    },
+    {
+      "flag": 5,
+      "name": "Read failure",
+      "severity": "Critical",
+      "action": "Investigate media and drive; preserve the original cartridge for recovery.",
+      "defined": true
+    },
+    {
+      "flag": 6,
+      "name": "Write failure",
+      "severity": "Critical",
+      "action": "Review the failed job and isolate the cartridge from the drive fault.",
+      "defined": true
+    },
+    {
+      "flag": 7,
+      "name": "Media life",
+      "severity": "Warning",
+      "action": "Schedule replacement of the cartridge and preserve required data.",
+      "defined": true
+    },
+    {
+      "flag": 8,
+      "name": "Not data grade",
+      "severity": "Warning",
+      "action": "Use media approved for the drive and the intended retention policy.",
+      "defined": true
+    },
+    {
+      "flag": 9,
+      "name": "Write protect",
+      "severity": "Critical",
+      "action": "Verify that cartridge protection matches the intended job; do not change it automatically.",
+      "defined": true
+    },
+    {
+      "flag": 10,
+      "name": "No removal",
+      "severity": "Info",
+      "action": "Check the application's media-removal reservation before operator intervention.",
+      "defined": true
+    },
+    {
+      "flag": 11,
+      "name": "Cleaning media",
+      "severity": "Info",
+      "action": "Confirm that the loaded cartridge is intended for cleaning.",
+      "defined": true
+    },
+    {
+      "flag": 12,
+      "name": "Unsupported format",
+      "severity": "Info",
+      "action": "Check drive-generation and cartridge-format compatibility.",
+      "defined": true
+    },
+    {
+      "flag": 13,
+      "name": "Recoverable mechanical cartridge failure",
+      "severity": "Critical",
+      "action": "Follow the vendor's safe cartridge recovery procedure.",
+      "defined": true
+    },
+    {
+      "flag": 14,
+      "name": "Unrecoverable mechanical cartridge failure",
+      "severity": "Critical",
+      "action": "Stop using the cartridge and request qualified service.",
+      "defined": true
+    },
+    {
+      "flag": 15,
+      "name": "Memory chip in cartridge failure",
+      "severity": "Warning",
+      "action": "Review cartridge-memory errors and plan media replacement.",
+      "defined": true
+    },
+    {
+      "flag": 16,
+      "name": "Forced eject",
+      "severity": "Critical",
+      "action": "Check job completion and cartridge integrity after the forced removal.",
+      "defined": true
+    },
+    {
+      "flag": 17,
+      "name": "Read only format",
+      "severity": "Warning",
+      "action": "Use a drive and media combination that supports the intended operation.",
+      "defined": true
+    },
+    {
+      "flag": 18,
+      "name": "Tape directory corrupted on load",
+      "severity": "Warning",
+      "action": "Preserve the data and consult the application recovery procedure.",
+      "defined": true
+    },
+    {
+      "flag": 19,
+      "name": "Nearing media life",
+      "severity": "Info",
+      "action": "Plan cartridge replacement before its service limit.",
+      "defined": true
+    },
+    {
+      "flag": 20,
+      "name": "Clean now",
+      "severity": "Critical",
+      "action": "Arrange an approved cleaning cycle with compatible cleaning media.",
+      "defined": true
+    },
+    {
+      "flag": 21,
+      "name": "Clean periodic",
+      "severity": "Warning",
+      "action": "Schedule cleaning according to the drive's maintenance instructions.",
+      "defined": true
+    },
+    {
+      "flag": 22,
+      "name": "Expired cleaning media",
+      "severity": "Critical",
+      "action": "Replace the cleaning cartridge with an unused or valid one.",
+      "defined": true
+    },
+    {
+      "flag": 23,
+      "name": "Invalid cleaning tape",
+      "severity": "Critical",
+      "action": "Select a cleaning cartridge approved for this drive.",
+      "defined": true
+    },
+    {
+      "flag": 24,
+      "name": "Retension requested",
+      "severity": "Warning",
+      "action": "Consult the drive vendor; this toolkit never repositions tape.",
+      "defined": true
+    },
+    {
+      "flag": 25,
+      "name": "Dual-port interface error",
+      "severity": "Warning",
+      "action": "Review both interface paths and transport error counters.",
+      "defined": true
+    },
+    {
+      "flag": 26,
+      "name": "Cooling fan failure",
+      "severity": "Warning",
+      "action": "Check cooling and request service for the failed fan.",
+      "defined": true
+    },
+    {
+      "flag": 27,
+      "name": "Power supply failure",
+      "severity": "Warning",
+      "action": "Check power redundancy and arrange service.",
+      "defined": true
+    },
+    {
+      "flag": 28,
+      "name": "Power consumption",
+      "severity": "Warning",
+      "action": "Check the drive's power requirements and supply condition.",
+      "defined": true
+    },
+    {
+      "flag": 29,
+      "name": "Drive maintenance",
+      "severity": "Warning",
+      "action": "Schedule the vendor's prescribed maintenance.",
+      "defined": true
+    },
+    {
+      "flag": 30,
+      "name": "Hardware A",
+      "severity": "Critical",
+      "action": "Preserve diagnostics and request hardware service.",
+      "defined": true
+    },
+    {
+      "flag": 31,
+      "name": "Hardware B",
+      "severity": "Critical",
+      "action": "Preserve diagnostics and consult the vendor's fault-isolation procedure.",
+      "defined": true
+    },
+    {
+      "flag": 32,
+      "name": "Interface",
+      "severity": "Warning",
+      "action": "Check interface cabling and transport errors using approved procedures.",
+      "defined": true
+    },
+    {
+      "flag": 33,
+      "name": "Eject media",
+      "severity": "Critical",
+      "action": "Consult the vendor's safe removal procedure; no eject command is issued here.",
+      "defined": true
+    },
+    {
+      "flag": 34,
+      "name": "Down-load fail",
+      "severity": "Warning",
+      "action": "Review the vendor's update procedure with support; this toolkit never updates firmware.",
+      "defined": true
+    },
+    {
+      "flag": 35,
+      "name": "Drive humidity",
+      "severity": "Warning",
+      "action": "Check the environment against the drive's humidity limits.",
+      "defined": true
+    },
+    {
+      "flag": 36,
+      "name": "Drive temperature",
+      "severity": "Warning",
+      "action": "Check airflow and ambient temperature against vendor limits.",
+      "defined": true
+    },
+    {
+      "flag": 37,
+      "name": "Drive voltage",
+      "severity": "Warning",
+      "action": "Have the power supply and voltage condition checked.",
+      "defined": true
+    },
+    {
+      "flag": 38,
+      "name": "Predictive failure",
+      "severity": "Critical",
+      "action": "Plan drive replacement and preserve diagnostics for service.",
+      "defined": true
+    },
+    {
+      "flag": 39,
+      "name": "Diagnostics required",
+      "severity": "Warning",
+      "action": "Arrange vendor-approved diagnostics after reviewing active workloads.",
+      "defined": true
+    },
+    {
+      "flag": 40,
+      "name": "Obsolete",
+      "severity": "Info",
+      "action": "Preserve the raw flag and consult the device vendor; no standard action is assigned.",
+      "defined": false
+    },
+    {
+      "flag": 41,
+      "name": "Obsolete",
+      "severity": "Info",
+      "action": "Preserve the raw flag and consult the device vendor; no standard action is assigned.",
+      "defined": false
+    },
+    {
+      "flag": 42,
+      "name": "Obsolete",
+      "severity": "Info",
+      "action": "Preserve the raw flag and consult the device vendor; no standard action is assigned.",
+      "defined": false
+    },
+    {
+      "flag": 43,
+      "name": "Obsolete",
+      "severity": "Info",
+      "action": "Preserve the raw flag and consult the device vendor; no standard action is assigned.",
+      "defined": false
+    },
+    {
+      "flag": 44,
+      "name": "Obsolete",
+      "severity": "Info",
+      "action": "Preserve the raw flag and consult the device vendor; no standard action is assigned.",
+      "defined": false
+    },
+    {
+      "flag": 45,
+      "name": "Obsolete",
+      "severity": "Info",
+      "action": "Preserve the raw flag and consult the device vendor; no standard action is assigned.",
+      "defined": false
+    },
+    {
+      "flag": 46,
+      "name": "Obsolete",
+      "severity": "Info",
+      "action": "Preserve the raw flag and consult the device vendor; no standard action is assigned.",
+      "defined": false
+    },
+    {
+      "flag": 47,
+      "name": "Reserved",
+      "severity": "Info",
+      "action": "Preserve the raw flag and consult the device vendor; no standard action is assigned.",
+      "defined": false
+    },
+    {
+      "flag": 48,
+      "name": "Reserved",
+      "severity": "Info",
+      "action": "Preserve the raw flag and consult the device vendor; no standard action is assigned.",
+      "defined": false
+    },
+    {
+      "flag": 49,
+      "name": "Reserved",
+      "severity": "Info",
+      "action": "Preserve the raw flag and consult the device vendor; no standard action is assigned.",
+      "defined": false
+    },
+    {
+      "flag": 50,
+      "name": "Lost statistics",
+      "severity": "Warning",
+      "action": "Treat historical statistics as incomplete and retain the current capture.",
+      "defined": true
+    },
+    {
+      "flag": 51,
+      "name": "Tape directory invalid at unload",
+      "severity": "Warning",
+      "action": "Consult the backup application's directory recovery procedure.",
+      "defined": true
+    },
+    {
+      "flag": 52,
+      "name": "Tape system area write failure",
+      "severity": "Critical",
+      "action": "Preserve the job logs and investigate the cartridge's system area.",
+      "defined": true
+    },
+    {
+      "flag": 53,
+      "name": "Tape system area read failure",
+      "severity": "Critical",
+      "action": "Preserve the cartridge and consult the vendor's recovery procedure.",
+      "defined": true
+    },
+    {
+      "flag": 54,
+      "name": "No start of data",
+      "severity": "Critical",
+      "action": "Check format compatibility and seek recovery guidance before reusing media.",
+      "defined": true
+    },
+    {
+      "flag": 55,
+      "name": "Loading failure",
+      "severity": "Critical",
+      "action": "Inspect media condition under the vendor's safe handling procedure.",
+      "defined": true
+    },
+    {
+      "flag": 56,
+      "name": "Unrecoverable unload failure",
+      "severity": "Critical",
+      "action": "Request service; do not force the cartridge from the drive.",
+      "defined": true
+    },
+    {
+      "flag": 57,
+      "name": "Automation interface failure",
+      "severity": "Critical",
+      "action": "Review the drive-to-library interface and request service.",
+      "defined": true
+    },
+    {
+      "flag": 58,
+      "name": "Firmware failure",
+      "severity": "Warning",
+      "action": "Preserve diagnostics and consult support; do not attempt an automatic update.",
+      "defined": true
+    },
+    {
+      "flag": 59,
+      "name": "WORM medium integrity check failed",
+      "severity": "Warning",
+      "action": "Preserve the WORM cartridge and investigate integrity with the application vendor.",
+      "defined": true
+    },
+    {
+      "flag": 60,
+      "name": "WORM medium overwrite attempted",
+      "severity": "Warning",
+      "action": "Review the application's append and retention behavior for WORM media.",
+      "defined": true
+    },
+    {
+      "flag": 61,
+      "name": "Reserved",
+      "severity": "Info",
+      "action": "Preserve the raw flag and consult the device vendor; no standard action is assigned.",
+      "defined": false
+    },
+    {
+      "flag": 62,
+      "name": "Reserved",
+      "severity": "Info",
+      "action": "Preserve the raw flag and consult the device vendor; no standard action is assigned.",
+      "defined": false
+    },
+    {
+      "flag": 63,
+      "name": "Reserved",
+      "severity": "Info",
+      "action": "Preserve the raw flag and consult the device vendor; no standard action is assigned.",
+      "defined": false
+    },
+    {
+      "flag": 64,
+      "name": "Reserved",
+      "severity": "Info",
+      "action": "Preserve the raw flag and consult the device vendor; no standard action is assigned.",
+      "defined": false
+    }
+  ]
+}

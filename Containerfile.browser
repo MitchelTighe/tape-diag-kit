@@ -1,0 +1,4 @@
+FROM mcr.microsoft.com/playwright/python:v1.55.0-noble
+RUN python -m pip install --no-cache-dir --disable-pip-version-check playwright==1.55.0 pyee==13.0.0 greenlet==3.2.4 typing_extensions==4.15.0
+WORKDIR /work
+CMD ["python", "scripts/screenshots.py"]

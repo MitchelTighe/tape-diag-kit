@@ -1,0 +1,5 @@
+IBM ITDT synthetic saved TapeAlert report
+TapeAlert Flag 3: 1
+TapeAlert Flag 4: 1
+TapeAlert Flag 5: 1
+TapeAlert Flag 20: 1

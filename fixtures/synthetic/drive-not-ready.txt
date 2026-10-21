@@ -1,0 +1,8 @@
+Vendor identification: SYNTH
+Product identification: LTO-DEMO
+Product revision level: 0001
+sg_turs: device not ready: medium not present
+File number=-1, block number=-1, partition=0.
+Tape block size 262144 bytes. Density code 0x5d (LTO-8).
+General status bits on (10000):
+ DR_OPEN

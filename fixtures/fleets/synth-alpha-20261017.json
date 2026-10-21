@@ -1,0 +1,1785 @@
+{
+  "schema_version": "3.0",
+  "tool_version": "0.3.0",
+  "mode": "offline",
+  "inventory": {
+    "source": "lsscsi",
+    "devices": [
+      {
+        "kind": "drive",
+        "address": "9:0:1:0",
+        "vendor": "SYNTH",
+        "model": "Ultrium LTO-7",
+        "revision": "S007",
+        "device": "/dev/st0",
+        "generic_device": "/dev/sg9",
+        "nonrewinding_device": "/dev/nst0"
+      },
+      {
+        "kind": "drive",
+        "address": "9:0:2:0",
+        "vendor": "SYNTH",
+        "model": "Ultrium LTO-8",
+        "revision": "S008",
+        "device": "/dev/st1",
+        "generic_device": "/dev/sg10",
+        "nonrewinding_device": "/dev/nst1"
+      },
+      {
+        "kind": "drive",
+        "address": "9:0:3:0",
+        "vendor": "SYNTH",
+        "model": "Ultrium LTO-9",
+        "revision": "S009",
+        "device": "/dev/st2",
+        "generic_device": "/dev/sg11",
+        "nonrewinding_device": "/dev/nst2"
+      },
+      {
+        "kind": "changer",
+        "address": "9:0:8:0",
+        "vendor": "SYNTH",
+        "model": "Mid-size 48-slot library",
+        "revision": "S001",
+        "device": "/dev/sch0",
+        "generic_device": "/dev/sg20",
+        "nonrewinding_device": null
+      }
+    ],
+    "warnings": []
+  },
+  "drives": [
+    {
+      "device": "/dev/sg9",
+      "tapealert": {
+        "page": "0x2e",
+        "profile": "SSC sequential-access; T10/05-154r2 table x+2 (historical public proposal)",
+        "sources": [
+          "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+          "https://www.ibm.com/docs/en/ts4500-tape-library?topic=flags-tapealert-supported-by-lto-tape-drives",
+          "https://support.hpe.com/hpesc/public/docDisplay?docId=sd00006909en_us&docLocale=en_US&page=GUID-D7147C7F-2016-0901-0922-0000000005A5.html"
+        ],
+        "active_flags": [],
+        "observed_flags": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "inactive_flags": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "unobserved_flags": [],
+        "unknown_flags": [],
+        "warnings": []
+      },
+      "logpages": {
+        "pages": [
+          {
+            "page": "0x02",
+            "subpage": null,
+            "name": "Write error counters log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Errors corrected without substantial delay",
+                "value": 12,
+                "unit": null,
+                "raw": "12"
+              },
+              {
+                "name": "Total uncorrected errors",
+                "value": 0,
+                "unit": null,
+                "raw": "0"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x03",
+            "subpage": null,
+            "name": "Read error counters log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Errors corrected without substantial delay",
+                "value": 24,
+                "unit": null,
+                "raw": "24"
+              },
+              {
+                "name": "Total uncorrected errors",
+                "value": 0,
+                "unit": null,
+                "raw": "0"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x06",
+            "subpage": null,
+            "name": "Non-medium error log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Non-medium error count",
+                "value": 0,
+                "unit": null,
+                "raw": "0"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x0c",
+            "subpage": null,
+            "name": "Sequential-access device log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Data bytes received with WRITE commands",
+                "value": 180000000000,
+                "unit": null,
+                "raw": "180000000000"
+              },
+              {
+                "name": "Data bytes read with READ commands",
+                "value": 120000000000,
+                "unit": null,
+                "raw": "120000000000"
+              },
+              {
+                "name": "Cleaning required",
+                "value": 0,
+                "unit": null,
+                "raw": "0"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x0d",
+            "subpage": null,
+            "name": "Temperature log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Current temperature",
+                "value": 34,
+                "unit": "C",
+                "raw": "34 C"
+              },
+              {
+                "name": "Reference temperature",
+                "value": 55,
+                "unit": "C",
+                "raw": "55 C"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x14",
+            "subpage": null,
+            "name": "Device statistics log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Lifetime volume loads",
+                "value": 12003,
+                "unit": null,
+                "raw": "12003"
+              },
+              {
+                "name": "Lifetime cleaning operations",
+                "value": 18,
+                "unit": null,
+                "raw": "18"
+              },
+              {
+                "name": "Lifetime power on hours",
+                "value": 24000,
+                "unit": "hours",
+                "raw": "24000 hours"
+              },
+              {
+                "name": "Lifetime medium motion hours",
+                "value": 6000,
+                "unit": "hours",
+                "raw": "6000 hours"
+              },
+              {
+                "name": "Hours since last cleaning",
+                "value": 18,
+                "unit": "hours",
+                "raw": "18 hours"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x17",
+            "subpage": null,
+            "name": "Volume statistics log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Volume lifetime loads",
+                "value": 244,
+                "unit": null,
+                "raw": "244"
+              },
+              {
+                "name": "Total used native capacity",
+                "value": 900000,
+                "unit": "MiB",
+                "raw": "900000 MiB"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          }
+        ],
+        "preamble": [],
+        "warnings": []
+      },
+      "drive_status": {
+        "vendor": "SYNTH",
+        "product": "Ultrium LTO-7",
+        "revision": "S007",
+        "density": 92,
+        "density_description": "LTO-7",
+        "block_size": null,
+        "file_number": null,
+        "block_number": null,
+        "online": null,
+        "write_protect": null,
+        "ready": null,
+        "status_flags": [],
+        "warnings": []
+      },
+      "mam": {
+        "attributes": [
+          {
+            "id": "0x0003",
+            "name": "Load count",
+            "value": 244,
+            "unit": "loads",
+            "redacted": false,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          },
+          {
+            "id": "0x0220",
+            "name": "Total MiB written in medium life",
+            "value": 780000,
+            "unit": "MiB",
+            "redacted": false,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          },
+          {
+            "id": "0x0221",
+            "name": "Total MiB read in medium life",
+            "value": 420000,
+            "unit": "MiB",
+            "redacted": false,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          },
+          {
+            "id": "0x0222",
+            "name": "Total MiB written in current/last load",
+            "value": 180000,
+            "unit": "MiB",
+            "redacted": false,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          },
+          {
+            "id": "0x0223",
+            "name": "Total MiB read in current/last load",
+            "value": 120000,
+            "unit": "MiB",
+            "redacted": false,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          },
+          {
+            "id": "0x0401",
+            "name": "Medium serial number",
+            "value": "SYNTH-MEDIUM-ALPHA-7",
+            "unit": null,
+            "redacted": true,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          }
+        ],
+        "warnings": []
+      },
+      "inquiry": {
+        "vendor": "SYNTH",
+        "product": "Ultrium LTO-7",
+        "revision": "S007",
+        "serial": "SYNTH-ALPHA-LTO7",
+        "identifiers": [
+          {
+            "type": "SCSI_IDENT_LUN_NAA",
+            "value": "SYNTH-WWN-ALPHA-7"
+          },
+          {
+            "type": "decoded",
+            "value": "SYNTH-WWN-ALPHA-7"
+          }
+        ],
+        "warnings": []
+      },
+      "tapealert_response": null,
+      "asset_id": "SYNTH-ALPHA-LTO7",
+      "identity_basis": "synthetic-serial",
+      "health": {
+        "model": "triage-v3.0.0",
+        "score": 100,
+        "grade": "A",
+        "assessment": "clear",
+        "coverage": "complete",
+        "gaps": [],
+        "reasons": []
+      }
+    },
+    {
+      "device": "/dev/sg10",
+      "tapealert": {
+        "page": "0x2e",
+        "profile": "SSC sequential-access; T10/05-154r2 table x+2 (historical public proposal)",
+        "sources": [
+          "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+          "https://www.ibm.com/docs/en/ts4500-tape-library?topic=flags-tapealert-supported-by-lto-tape-drives",
+          "https://support.hpe.com/hpesc/public/docDisplay?docId=sd00006909en_us&docLocale=en_US&page=GUID-D7147C7F-2016-0901-0922-0000000005A5.html"
+        ],
+        "active_flags": [],
+        "observed_flags": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "inactive_flags": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "unobserved_flags": [],
+        "unknown_flags": [],
+        "warnings": []
+      },
+      "logpages": {
+        "pages": [
+          {
+            "page": "0x02",
+            "subpage": null,
+            "name": "Write error counters log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Errors corrected without substantial delay",
+                "value": 12,
+                "unit": null,
+                "raw": "12"
+              },
+              {
+                "name": "Total uncorrected errors",
+                "value": 0,
+                "unit": null,
+                "raw": "0"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x03",
+            "subpage": null,
+            "name": "Read error counters log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Errors corrected without substantial delay",
+                "value": 24,
+                "unit": null,
+                "raw": "24"
+              },
+              {
+                "name": "Total uncorrected errors",
+                "value": 0,
+                "unit": null,
+                "raw": "0"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x06",
+            "subpage": null,
+            "name": "Non-medium error log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Non-medium error count",
+                "value": 0,
+                "unit": null,
+                "raw": "0"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x0c",
+            "subpage": null,
+            "name": "Sequential-access device log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Data bytes received with WRITE commands",
+                "value": 180000000000,
+                "unit": null,
+                "raw": "180000000000"
+              },
+              {
+                "name": "Data bytes read with READ commands",
+                "value": 120000000000,
+                "unit": null,
+                "raw": "120000000000"
+              },
+              {
+                "name": "Cleaning required",
+                "value": 0,
+                "unit": null,
+                "raw": "0"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x0d",
+            "subpage": null,
+            "name": "Temperature log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Current temperature",
+                "value": 34,
+                "unit": "C",
+                "raw": "34 C"
+              },
+              {
+                "name": "Reference temperature",
+                "value": 55,
+                "unit": "C",
+                "raw": "55 C"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x14",
+            "subpage": null,
+            "name": "Device statistics log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Lifetime volume loads",
+                "value": 12003,
+                "unit": null,
+                "raw": "12003"
+              },
+              {
+                "name": "Lifetime cleaning operations",
+                "value": 18,
+                "unit": null,
+                "raw": "18"
+              },
+              {
+                "name": "Lifetime power on hours",
+                "value": 24000,
+                "unit": "hours",
+                "raw": "24000 hours"
+              },
+              {
+                "name": "Lifetime medium motion hours",
+                "value": 6000,
+                "unit": "hours",
+                "raw": "6000 hours"
+              },
+              {
+                "name": "Hours since last cleaning",
+                "value": 18,
+                "unit": "hours",
+                "raw": "18 hours"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x17",
+            "subpage": null,
+            "name": "Volume statistics log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Volume lifetime loads",
+                "value": 314,
+                "unit": null,
+                "raw": "314"
+              },
+              {
+                "name": "Total used native capacity",
+                "value": 900000,
+                "unit": "MiB",
+                "raw": "900000 MiB"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          }
+        ],
+        "preamble": [],
+        "warnings": []
+      },
+      "drive_status": {
+        "vendor": "SYNTH",
+        "product": "Ultrium LTO-8",
+        "revision": "S008",
+        "density": 94,
+        "density_description": "LTO-8",
+        "block_size": null,
+        "file_number": null,
+        "block_number": null,
+        "online": null,
+        "write_protect": null,
+        "ready": null,
+        "status_flags": [],
+        "warnings": []
+      },
+      "mam": {
+        "attributes": [
+          {
+            "id": "0x0003",
+            "name": "Load count",
+            "value": 314,
+            "unit": "loads",
+            "redacted": false,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          },
+          {
+            "id": "0x0220",
+            "name": "Total MiB written in medium life",
+            "value": 780000,
+            "unit": "MiB",
+            "redacted": false,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          },
+          {
+            "id": "0x0221",
+            "name": "Total MiB read in medium life",
+            "value": 420000,
+            "unit": "MiB",
+            "redacted": false,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          },
+          {
+            "id": "0x0222",
+            "name": "Total MiB written in current/last load",
+            "value": 180000,
+            "unit": "MiB",
+            "redacted": false,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          },
+          {
+            "id": "0x0223",
+            "name": "Total MiB read in current/last load",
+            "value": 120000,
+            "unit": "MiB",
+            "redacted": false,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          },
+          {
+            "id": "0x0401",
+            "name": "Medium serial number",
+            "value": "SYNTH-MEDIUM-ALPHA-8",
+            "unit": null,
+            "redacted": true,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          }
+        ],
+        "warnings": []
+      },
+      "inquiry": {
+        "vendor": "SYNTH",
+        "product": "Ultrium LTO-8",
+        "revision": "S008",
+        "serial": "SYNTH-ALPHA-LTO8",
+        "identifiers": [
+          {
+            "type": "SCSI_IDENT_LUN_NAA",
+            "value": "SYNTH-WWN-ALPHA-8"
+          },
+          {
+            "type": "decoded",
+            "value": "SYNTH-WWN-ALPHA-8"
+          }
+        ],
+        "warnings": []
+      },
+      "tapealert_response": null,
+      "asset_id": "SYNTH-ALPHA-LTO8",
+      "identity_basis": "synthetic-serial",
+      "health": {
+        "model": "triage-v3.0.0",
+        "score": 100,
+        "grade": "A",
+        "assessment": "clear",
+        "coverage": "complete",
+        "gaps": [],
+        "reasons": []
+      }
+    },
+    {
+      "device": "/dev/sg11",
+      "tapealert": {
+        "page": "0x2e",
+        "profile": "SSC sequential-access; T10/05-154r2 table x+2 (historical public proposal)",
+        "sources": [
+          "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+          "https://www.ibm.com/docs/en/ts4500-tape-library?topic=flags-tapealert-supported-by-lto-tape-drives",
+          "https://support.hpe.com/hpesc/public/docDisplay?docId=sd00006909en_us&docLocale=en_US&page=GUID-D7147C7F-2016-0901-0922-0000000005A5.html"
+        ],
+        "active_flags": [],
+        "observed_flags": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "inactive_flags": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "unobserved_flags": [],
+        "unknown_flags": [],
+        "warnings": []
+      },
+      "logpages": {
+        "pages": [
+          {
+            "page": "0x02",
+            "subpage": null,
+            "name": "Write error counters log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Errors corrected without substantial delay",
+                "value": 12,
+                "unit": null,
+                "raw": "12"
+              },
+              {
+                "name": "Total uncorrected errors",
+                "value": 0,
+                "unit": null,
+                "raw": "0"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x03",
+            "subpage": null,
+            "name": "Read error counters log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Errors corrected without substantial delay",
+                "value": 24,
+                "unit": null,
+                "raw": "24"
+              },
+              {
+                "name": "Total uncorrected errors",
+                "value": 0,
+                "unit": null,
+                "raw": "0"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x06",
+            "subpage": null,
+            "name": "Non-medium error log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Non-medium error count",
+                "value": 0,
+                "unit": null,
+                "raw": "0"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x0c",
+            "subpage": null,
+            "name": "Sequential-access device log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Data bytes received with WRITE commands",
+                "value": 180000000000,
+                "unit": null,
+                "raw": "180000000000"
+              },
+              {
+                "name": "Data bytes read with READ commands",
+                "value": 120000000000,
+                "unit": null,
+                "raw": "120000000000"
+              },
+              {
+                "name": "Cleaning required",
+                "value": 0,
+                "unit": null,
+                "raw": "0"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x0d",
+            "subpage": null,
+            "name": "Temperature log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Current temperature",
+                "value": 34,
+                "unit": "C",
+                "raw": "34 C"
+              },
+              {
+                "name": "Reference temperature",
+                "value": 55,
+                "unit": "C",
+                "raw": "55 C"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x14",
+            "subpage": null,
+            "name": "Device statistics log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Lifetime volume loads",
+                "value": 12003,
+                "unit": null,
+                "raw": "12003"
+              },
+              {
+                "name": "Lifetime cleaning operations",
+                "value": 18,
+                "unit": null,
+                "raw": "18"
+              },
+              {
+                "name": "Lifetime power on hours",
+                "value": 24000,
+                "unit": "hours",
+                "raw": "24000 hours"
+              },
+              {
+                "name": "Lifetime medium motion hours",
+                "value": 6000,
+                "unit": "hours",
+                "raw": "6000 hours"
+              },
+              {
+                "name": "Hours since last cleaning",
+                "value": 18,
+                "unit": "hours",
+                "raw": "18 hours"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          },
+          {
+            "page": "0x17",
+            "subpage": null,
+            "name": "Volume statistics log page",
+            "known": true,
+            "parameters": [
+              {
+                "name": "Volume lifetime loads",
+                "value": 384,
+                "unit": null,
+                "raw": "384"
+              },
+              {
+                "name": "Total used native capacity",
+                "value": 900000,
+                "unit": "MiB",
+                "raw": "900000 MiB"
+              }
+            ],
+            "supported_pages": [],
+            "raw_lines": []
+          }
+        ],
+        "preamble": [],
+        "warnings": []
+      },
+      "drive_status": {
+        "vendor": "SYNTH",
+        "product": "Ultrium LTO-9",
+        "revision": "S009",
+        "density": 96,
+        "density_description": "LTO-9",
+        "block_size": null,
+        "file_number": null,
+        "block_number": null,
+        "online": null,
+        "write_protect": null,
+        "ready": null,
+        "status_flags": [],
+        "warnings": []
+      },
+      "mam": {
+        "attributes": [
+          {
+            "id": "0x0003",
+            "name": "Load count",
+            "value": 384,
+            "unit": "loads",
+            "redacted": false,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          },
+          {
+            "id": "0x0220",
+            "name": "Total MiB written in medium life",
+            "value": 780000,
+            "unit": "MiB",
+            "redacted": false,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          },
+          {
+            "id": "0x0221",
+            "name": "Total MiB read in medium life",
+            "value": 420000,
+            "unit": "MiB",
+            "redacted": false,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          },
+          {
+            "id": "0x0222",
+            "name": "Total MiB written in current/last load",
+            "value": 180000,
+            "unit": "MiB",
+            "redacted": false,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          },
+          {
+            "id": "0x0223",
+            "name": "Total MiB read in current/last load",
+            "value": 120000,
+            "unit": "MiB",
+            "redacted": false,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          },
+          {
+            "id": "0x0401",
+            "name": "Medium serial number",
+            "value": "SYNTH-MEDIUM-ALPHA-9",
+            "unit": null,
+            "redacted": true,
+            "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+          }
+        ],
+        "warnings": []
+      },
+      "inquiry": {
+        "vendor": "SYNTH",
+        "product": "Ultrium LTO-9",
+        "revision": "S009",
+        "serial": "SYNTH-ALPHA-LTO9",
+        "identifiers": [
+          {
+            "type": "SCSI_IDENT_LUN_NAA",
+            "value": "SYNTH-WWN-ALPHA-9"
+          },
+          {
+            "type": "decoded",
+            "value": "SYNTH-WWN-ALPHA-9"
+          }
+        ],
+        "warnings": []
+      },
+      "tapealert_response": null,
+      "asset_id": "SYNTH-ALPHA-LTO9",
+      "identity_basis": "synthetic-serial",
+      "health": {
+        "model": "triage-v3.0.0",
+        "score": 100,
+        "grade": "A",
+        "assessment": "clear",
+        "coverage": "complete",
+        "gaps": [],
+        "reasons": []
+      }
+    }
+  ],
+  "libraries": [
+    {
+      "device": "/dev/sg20",
+      "status": {
+        "device": "/dev/sg20",
+        "reported_drives": 3,
+        "reported_slots": 48,
+        "reported_ie_ports": 4,
+        "drives": [
+          {
+            "element": 0,
+            "full": true,
+            "barcode": "SYN001L7",
+            "alternate_barcode": null,
+            "source_slot": 1
+          },
+          {
+            "element": 1,
+            "full": true,
+            "barcode": "SYN002L8",
+            "alternate_barcode": null,
+            "source_slot": 2
+          },
+          {
+            "element": 2,
+            "full": true,
+            "barcode": "SYN003L9",
+            "alternate_barcode": null,
+            "source_slot": 3
+          }
+        ],
+        "slots": [
+          {
+            "element": 1,
+            "full": false,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 2,
+            "full": false,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 3,
+            "full": false,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 4,
+            "full": true,
+            "barcode": "SYN004L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 5,
+            "full": true,
+            "barcode": "SYN005L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 6,
+            "full": true,
+            "barcode": "SYN006L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 7,
+            "full": true,
+            "barcode": "SYN007L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 8,
+            "full": true,
+            "barcode": "SYN008L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 9,
+            "full": true,
+            "barcode": "SYN009L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 10,
+            "full": true,
+            "barcode": "SYN010L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 11,
+            "full": true,
+            "barcode": "SYN011L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 12,
+            "full": true,
+            "barcode": "SYN012L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 13,
+            "full": true,
+            "barcode": "SYN013L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 14,
+            "full": true,
+            "barcode": "SYN014L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 15,
+            "full": true,
+            "barcode": "SYN015L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 16,
+            "full": true,
+            "barcode": "SYN016L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 17,
+            "full": true,
+            "barcode": "SYN017L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 18,
+            "full": true,
+            "barcode": "SYN018L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 19,
+            "full": true,
+            "barcode": "SYN019L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 20,
+            "full": true,
+            "barcode": "SYN020L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 21,
+            "full": true,
+            "barcode": "SYN021L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 22,
+            "full": true,
+            "barcode": "SYN022L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 23,
+            "full": true,
+            "barcode": "SYN023L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 24,
+            "full": true,
+            "barcode": "SYN024L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 25,
+            "full": true,
+            "barcode": "SYN025L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 26,
+            "full": true,
+            "barcode": "SYN026L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 27,
+            "full": true,
+            "barcode": "SYN027L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 28,
+            "full": true,
+            "barcode": "SYN028L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 29,
+            "full": true,
+            "barcode": "SYN029L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 30,
+            "full": true,
+            "barcode": "SYN030L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 31,
+            "full": true,
+            "barcode": "SYN031L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 32,
+            "full": true,
+            "barcode": "SYN032L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 33,
+            "full": true,
+            "barcode": "SYN033L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 34,
+            "full": true,
+            "barcode": "SYN034L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 35,
+            "full": true,
+            "barcode": "SYN035L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 36,
+            "full": true,
+            "barcode": "SYN036L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 37,
+            "full": true,
+            "barcode": "SYN037L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 38,
+            "full": true,
+            "barcode": "SYN038L8",
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 39,
+            "full": false,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 40,
+            "full": false,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 41,
+            "full": false,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 42,
+            "full": false,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 43,
+            "full": false,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 44,
+            "full": false,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          }
+        ],
+        "ie_ports": [
+          {
+            "element": 45,
+            "full": false,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 46,
+            "full": false,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 47,
+            "full": false,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          },
+          {
+            "element": 48,
+            "full": false,
+            "barcode": null,
+            "alternate_barcode": null,
+            "source_slot": null
+          }
+        ],
+        "warnings": []
+      },
+      "checks": [
+        {
+          "rule": "ie-state",
+          "severity": "info",
+          "message": "IE port 45 is empty; door/access state is not reported by mtx status.",
+          "source": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1"
+        },
+        {
+          "rule": "ie-state",
+          "severity": "info",
+          "message": "IE port 46 is empty; door/access state is not reported by mtx status.",
+          "source": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1"
+        },
+        {
+          "rule": "ie-state",
+          "severity": "info",
+          "message": "IE port 47 is empty; door/access state is not reported by mtx status.",
+          "source": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1"
+        },
+        {
+          "rule": "ie-state",
+          "severity": "info",
+          "message": "IE port 48 is empty; door/access state is not reported by mtx status.",
+          "source": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1"
+        },
+        {
+          "rule": "source-empty",
+          "severity": "info",
+          "message": "Loaded drive has an empty source slot, the expected state after a move.",
+          "source": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1"
+        },
+        {
+          "rule": "source-empty",
+          "severity": "info",
+          "message": "Loaded drive has an empty source slot, the expected state after a move.",
+          "source": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1"
+        },
+        {
+          "rule": "source-empty",
+          "severity": "info",
+          "message": "Loaded drive has an empty source slot, the expected state after a move.",
+          "source": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1"
+        }
+      ],
+      "asset_id": "library:/dev/sg20",
+      "identity_basis": "device-path",
+      "health": {
+        "model": "triage-v3.0.0",
+        "score": 100,
+        "grade": "A",
+        "assessment": "unknown",
+        "coverage": "incomplete",
+        "gaps": [
+          "mtx status cannot establish door, sensor, or complete element exception health"
+        ],
+        "reasons": []
+      }
+    }
+  ],
+  "ltfs": null,
+  "itdt": null,
+  "commands": [],
+  "errors": [],
+  "document_type": "report",
+  "topology": null,
+  "provenance": {
+    "source": "Original deterministic synthetic v3 fleet; scripts/generate-fleets.py",
+    "references": [
+      "https://www.t10.org/ftp/t10/document.05/05-213r3.pdf",
+      "https://www.t10.org/ftp/t10/document.08/08-066r0.pdf"
+    ],
+    "identifier_policy": "MAM serial and VPD identifiers replaced with SYNTH placeholders; no raw originals retained"
+  },
+  "health": {
+    "model": "triage-v3.0.0",
+    "score": 100,
+    "aggregation": "minimum asset score; no assets means unknown",
+    "assets": 4,
+    "attention": 0
+  },
+  "fleet_id": "SYNTH-ALPHA",
+  "captured_at": "2026-10-17T12:00:00Z",
+  "migration": {
+    "from_version": "2.0",
+    "original_tool_version": "0.3.0",
+    "notes": [
+      "Scores recomputed with triage-v3.0.0; source observations retained.",
+      "Capture time unknown unless explicitly supplied; never inferred from file mtime."
+    ]
+  }
+}

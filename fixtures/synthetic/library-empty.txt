@@ -1,0 +1,4 @@
+Storage Changer /dev/sg10:1 Drives, 2 Slots ( 1 Import/Export )
+Data Transfer Element 0:Empty
+Storage Element 1:Empty
+Storage Element 2 IMPORT/EXPORT:Empty

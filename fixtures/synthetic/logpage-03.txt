@@ -1,0 +1,3 @@
+Read error counters log page [0x03]:
+  Errors corrected without substantial delay = 7
+  Total uncorrected errors = 0

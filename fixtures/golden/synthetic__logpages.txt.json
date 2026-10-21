@@ -1,0 +1,188 @@
+{
+  "pages": [
+    {
+      "page": "0x00",
+      "subpage": null,
+      "name": "Supported log pages",
+      "known": true,
+      "parameters": [],
+      "supported_pages": [
+        {
+          "page": "0x00",
+          "subpage": null,
+          "name": "Supported log pages"
+        },
+        {
+          "page": "0x02",
+          "subpage": null,
+          "name": "Write error counter"
+        },
+        {
+          "page": "0x03",
+          "subpage": null,
+          "name": "Read error counter"
+        },
+        {
+          "page": "0x0c",
+          "subpage": null,
+          "name": "Sequential access device"
+        },
+        {
+          "page": "0x0d",
+          "subpage": null,
+          "name": "Temperature"
+        },
+        {
+          "page": "0x14",
+          "subpage": null,
+          "name": "Device statistics"
+        },
+        {
+          "page": "0x17",
+          "subpage": null,
+          "name": "Volume statistics"
+        },
+        {
+          "page": "0x2e",
+          "subpage": null,
+          "name": "Tape alert"
+        }
+      ],
+      "raw_lines": []
+    },
+    {
+      "page": "0x02",
+      "subpage": null,
+      "name": "Write error counter page",
+      "known": true,
+      "parameters": [
+        {
+          "name": "Errors corrected without substantial delay",
+          "value": 12,
+          "unit": null,
+          "raw": "12"
+        },
+        {
+          "name": "Total uncorrected errors",
+          "value": 0,
+          "unit": null,
+          "raw": "0"
+        }
+      ],
+      "supported_pages": [],
+      "raw_lines": []
+    },
+    {
+      "page": "0x03",
+      "subpage": null,
+      "name": "Read error counter page",
+      "known": true,
+      "parameters": [
+        {
+          "name": "Total times correction algorithm processed",
+          "value": 7,
+          "unit": null,
+          "raw": "7"
+        },
+        {
+          "name": "Total uncorrected errors",
+          "value": 1,
+          "unit": null,
+          "raw": "1"
+        }
+      ],
+      "supported_pages": [],
+      "raw_lines": []
+    },
+    {
+      "page": "0x0c",
+      "subpage": null,
+      "name": "Sequential access device log page",
+      "known": true,
+      "parameters": [
+        {
+          "name": "Data bytes received with WRITE commands",
+          "value": 9000000,
+          "unit": null,
+          "raw": "9000000"
+        },
+        {
+          "name": "Data bytes read with READ commands",
+          "value": 12000000,
+          "unit": null,
+          "raw": "12000000"
+        }
+      ],
+      "supported_pages": [],
+      "raw_lines": []
+    },
+    {
+      "page": "0x0d",
+      "subpage": null,
+      "name": "Temperature log page",
+      "known": true,
+      "parameters": [
+        {
+          "name": "Current temperature",
+          "value": 29,
+          "unit": "C",
+          "raw": "29 C"
+        },
+        {
+          "name": "Reference temperature",
+          "value": 60,
+          "unit": "C",
+          "raw": "60 C"
+        }
+      ],
+      "supported_pages": [],
+      "raw_lines": []
+    },
+    {
+      "page": "0x14",
+      "subpage": null,
+      "name": "Device statistics log page",
+      "known": true,
+      "parameters": [
+        {
+          "name": "Lifetime media loads",
+          "value": 42,
+          "unit": null,
+          "raw": "42"
+        }
+      ],
+      "supported_pages": [],
+      "raw_lines": []
+    },
+    {
+      "page": "0x17",
+      "subpage": null,
+      "name": "Volume statistics log page",
+      "known": true,
+      "parameters": [
+        {
+          "name": "Page valid",
+          "value": 1,
+          "unit": null,
+          "raw": "1"
+        },
+        {
+          "name": "Total native capacity in megabytes",
+          "value": 12000000,
+          "unit": null,
+          "raw": "12000000"
+        },
+        {
+          "name": "Total used native capacity in megabytes",
+          "value": 4000000,
+          "unit": null,
+          "raw": "4000000"
+        }
+      ],
+      "supported_pages": [],
+      "raw_lines": []
+    }
+  ],
+  "preamble": [],
+  "warnings": []
+}

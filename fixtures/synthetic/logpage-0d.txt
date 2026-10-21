@@ -1,0 +1,3 @@
+Temperature log page [0x0d]:
+  Current temperature = 29 C
+  Reference temperature = 55 C

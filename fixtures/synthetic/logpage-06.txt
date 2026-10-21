@@ -1,0 +1,2 @@
+Non-medium error log page [0x06]:
+  Non-medium error count = 0

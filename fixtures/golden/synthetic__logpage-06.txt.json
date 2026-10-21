@@ -1,0 +1,22 @@
+{
+  "pages": [
+    {
+      "page": "0x06",
+      "subpage": null,
+      "name": "Non-medium error log page",
+      "known": true,
+      "parameters": [
+        {
+          "name": "Non-medium error count",
+          "value": 0,
+          "unit": null,
+          "raw": "0"
+        }
+      ],
+      "supported_pages": [],
+      "raw_lines": []
+    }
+  ],
+  "preamble": [],
+  "warnings": []
+}

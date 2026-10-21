@@ -1,0 +1,28 @@
+{
+  "pages": [
+    {
+      "page": "0x03",
+      "subpage": null,
+      "name": "Read error counters log page",
+      "known": true,
+      "parameters": [
+        {
+          "name": "Errors corrected without substantial delay",
+          "value": 7,
+          "unit": null,
+          "raw": "7"
+        },
+        {
+          "name": "Total uncorrected errors",
+          "value": 0,
+          "unit": null,
+          "raw": "0"
+        }
+      ],
+      "supported_pages": [],
+      "raw_lines": []
+    }
+  ],
+  "preamble": [],
+  "warnings": []
+}

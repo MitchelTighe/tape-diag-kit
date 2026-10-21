@@ -1,0 +1,28 @@
+{
+  "pages": [
+    {
+      "page": "0x0d",
+      "subpage": null,
+      "name": "Temperature log page",
+      "known": true,
+      "parameters": [
+        {
+          "name": "Current temperature",
+          "value": null,
+          "unit": null,
+          "raw": "<not available>"
+        },
+        {
+          "name": "Reference temperature",
+          "value": 60,
+          "unit": "C",
+          "raw": "60 C"
+        }
+      ],
+      "supported_pages": [],
+      "raw_lines": []
+    }
+  ],
+  "preamble": [],
+  "warnings": []
+}

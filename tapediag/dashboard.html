@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-__SCRIPT_HASH__'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Tape diagnostics · Fleet health</title>
+<style>
+:root{color-scheme:light dark;--bg:#f3f5f7;--panel:#fff;--ink:#162f3e;--muted:#526875;--line:#d7e0e6;--teal:#076e68;--soft:#e7f4ef;--warn:#82520c;--warnbg:#fff3d8;--red:#aa3544;--redbg:#fff0f0;--shadow:0 4px 18px #16364708}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button,select,input[type=search]{border:1px solid var(--line);border-radius:7px;color:var(--ink);background:var(--panel);padding:9px 11px}button{cursor:pointer}button:hover{border-color:var(--teal)}:focus-visible{outline:3px solid #269eaa;outline-offset:3px}a{color:var(--teal)}header{background:#102f40;color:#fff;padding:23px max(24px,calc((100vw - 1376px)/2)) 28px}.brand{display:flex;align-items:center;gap:12px;font-weight:750;letter-spacing:.12em;font-size:12px;text-transform:uppercase}.brand svg{width:25px;height:25px}.brand span:last-child{margin-left:auto;border:1px solid #72939a;border-radius:5px;padding:4px 8px;color:#d6f3e5;letter-spacing:.06em;font-size:10px}.hero{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-top:27px}h1{font-size:36px;line-height:1.15;letter-spacing:-.03em;margin:0 0 10px}.hero p{color:#c5d8e1;margin:0;max-width:710px}.eyebrow{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:750;color:var(--muted)}.hero .eyebrow{color:#8bd6c9;margin-bottom:8px}.hero button{color:#fff;background:#214c5d;border-color:#5e7a87;white-space:nowrap}.shell{max-width:1424px;margin:auto;padding:25px 24px 40px}.metrics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px;margin-bottom:22px}.metric{border:1px solid var(--line);border-radius:9px;background:var(--panel);padding:15px 18px}.metric strong{display:block;font-size:28px;line-height:1.25;margin-top:7px;font-variant-numeric:tabular-nums}.metric small{color:var(--muted)}.tools{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:17px;display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap}.tools label{font-size:11px;font-weight:650;display:flex;flex-direction:column;gap:5px;color:var(--muted)}.tools input[type=search]{width:240px}.tools .files{flex:1;min-width:200px}.files input{max-width:100%;font-size:12px;padding:9px 0;color:var(--ink)}.tools select{max-width:200px;font-size:13px}.filter-panel>summary{display:none}.status{min-height:25px;font-size:13px;color:var(--muted);margin:12px 0}.status.error{color:var(--red);font-weight:650}.section-title{display:flex;align-items:center;justify-content:space-between;margin:22px 0 12px}h2{font-size:19px;margin:0;letter-spacing:-.02em}.section-title span{color:var(--muted);font-size:12px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.asset-card{border:1px solid var(--line);border-radius:11px;background:var(--panel);overflow:hidden;box-shadow:var(--shadow);border-top:3px solid var(--teal);min-width:0}.asset-card.attention{border-top-color:var(--warn)}.asset-card.failing{border-top-color:var(--red)}.card-top{padding:17px 18px 10px}.asset-meta{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:10px;font-weight:750;letter-spacing:.07em;text-transform:uppercase}.asset-card h3{font-size:19px;line-height:1.3;margin:9px 0 4px;overflow-wrap:anywhere}.asset-id{font:11px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--muted);overflow-wrap:anywhere}.health-row{display:flex;align-items:center;gap:15px;padding:9px 18px 15px}.score{font-size:42px;line-height:1;letter-spacing:-.04em;font-weight:750;font-variant-numeric:tabular-nums}.score small{font-size:13px;color:var(--muted);font-weight:450;letter-spacing:0}.badge{display:inline-flex;border-radius:5px;background:var(--soft);color:var(--teal);padding:4px 7px;font-size:11px;font-weight:750}.badge.attention{background:var(--warnbg);color:var(--warn)}.badge.unknown{background:var(--bg);color:var(--muted);border:1px solid var(--line)}.asset-card.unknown{border-top-color:#7a8e9a}.badge.failing{background:var(--redbg);color:var(--red)}.health-note{font-size:11px;color:var(--muted);margin-top:6px}.trend{padding:11px 18px 12px;border-block:1px solid var(--line);background:var(--bg)}.trend-label{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:11px}.spark{width:100%;height:53px;display:block;color:var(--teal);margin:5px 0 0}.failing .spark{color:var(--red)}.spark line{stroke:var(--line);stroke-dasharray:3 3}.spark polyline{fill:none;stroke:currentColor;stroke-width:2.5;vector-effect:non-scaling-stroke}.spark circle{fill:currentColor}.trend-text{font-size:10px;color:var(--muted);margin-top:2px}.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:14px 18px}.fact span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.05em}.fact strong{font-size:12px;font-weight:600;overflow-wrap:anywhere}.evidence{padding:0 18px 15px;font-size:12px}.evidence p{margin:5px 0 8px}.evidence details{border-top:1px solid var(--line);padding-top:9px;margin-top:9px}.evidence summary{cursor:pointer;color:var(--muted);font-weight:600}.evidence ul{padding-left:18px;margin:8px 0}.evidence li{margin-bottom:8px;overflow-wrap:anywhere}.evidence li small{display:block;color:var(--muted)}pre{font:11px/1.5 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere;max-height:350px;overflow:auto;background:var(--bg);padding:10px;border-radius:5px}.inventory{width:100%;border-collapse:collapse;font-size:11px}.inventory th,.inventory td{text-align:left;border-bottom:1px solid var(--line);padding:5px;overflow-wrap:anywhere}.inventory th{color:var(--muted)}.empty{padding:50px 25px;text-align:center;border:1px dashed var(--line);border-radius:10px;color:var(--muted);grid-column:1/-1}.model{border:1px solid var(--line);border-radius:10px;padding:17px 20px;background:var(--panel);margin-top:25px;font-size:12px;color:var(--muted)}.model strong{color:var(--ink)}.model p{margin:5px 0}footer{display:flex;justify-content:space-between;gap:15px;padding-top:19px;color:var(--muted);font-size:11px}.noscript{padding:25px;background:var(--warnbg);color:var(--warn)}
+@media(min-width:1650px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:1050px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.metrics{gap:9px}.metric{padding:12px}.tools .files{flex-basis:100%}}
+@media(max-width:600px){header{padding:18px 16px 24px}.hero{display:block;margin-top:23px}h1{font-size:30px}.hero p{font-size:13px}.hero button{margin-top:16px}.shell{padding:18px 14px 30px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.metric:last-child{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between}.metric strong{font-size:25px}.metric:last-child strong{margin:0}.metric:last-child small{display:none}.filter-panel>summary{display:list-item;cursor:pointer;font-size:13px;font-weight:650;padding:12px 14px;background:var(--panel);border:1px solid var(--line);border-radius:7px}.filter-panel[open]>summary{margin-bottom:10px}.tools{padding:12px;gap:10px}.tools label{flex:1;min-width:120px}.tools input[type=search],.tools select{width:100%;max-width:100%}.tools .files{min-width:0}.grid{grid-template-columns:minmax(0,1fr)}.section-title{align-items:flex-start;gap:10px}.section-title span{max-width:140px;text-align:right}.brand{font-size:10px}.brand span:last-child{font-size:9px}.asset-card h3{font-size:19px}footer{display:block}.model{padding:14px}}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1c26;--panel:#162b36;--ink:#e3edf3;--muted:#a6bbc7;--line:#36515f;--teal:#8dd9c8;--soft:#173e3b;--warn:#ffd588;--warnbg:#47391e;--red:#ffa5ac;--redbg:#442931;--shadow:none}header{background:#0a2433}}
+@media print{:root{color-scheme:light;--bg:#fff;--panel:#fff;--ink:#142e3e;--muted:#4c6370;--line:#aabac4;--teal:#146e62;--soft:#edf6ef;--warn:#725011;--warnbg:#fff4de;--red:#a52e3b;--redbg:#fff0f0}.filter-panel,.hero button,.status,footer button{display:none!important}header{padding:15px 0;background:white;color:var(--ink);border-bottom:2px solid var(--ink)}.hero p,.hero .eyebrow{color:var(--muted)}h1{font-size:26px}.hero{margin-top:12px}.brand span:last-child{color:var(--ink)}.shell{max-width:none;padding:15px 0}.metrics{grid-template-columns:repeat(5,minmax(0,1fr))}.metric{padding:8px}.metric strong{font-size:22px}.metric:last-child{display:block;grid-column:auto}.grid{display:block;column-count:auto}.asset-card{display:block;width:100%;break-inside:auto;margin-bottom:14px;box-shadow:none}.card-top,.health-row,.trend,.facts{break-inside:avoid}.card-top{padding:10px 14px}.health-row{padding:8px 14px 10px}.facts{grid-template-columns:repeat(4,minmax(0,1fr));padding:10px 14px;gap:8px}.evidence{font-size:11px;padding:0 14px 10px}.evidence li{margin-bottom:5px}.evidence details:not([open]){display:none}.spark{height:40px}.score{font-size:33px}pre{max-height:none}.model{break-inside:avoid}footer{display:block}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}@page{margin:12mm}}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="1" y="3" width="22" height="18" rx="3"/><circle cx="7" cy="12" r="3"/><circle cx="17" cy="12" r="3"/><path d="M7 15h10M5 18h14"/></svg><span>Tape / diagnostics</span><span>Read-only · Offline</span></div>
+ <div class="hero"><div><div class="eyebrow">Fleet health / triage-v3.0.0</div><h1>Evidence before action.</h1><p>Drive and library observations, ranked by attention needed. Review the score, its reasons, and what remains unknown.</p></div><button id="print" type="button">Print fleet report</button></div>
+</header>
+<noscript><div class="noscript">Enable JavaScript for local JSON loading and fleet views. This dashboard makes no network requests. The source JSON remains the authoritative record.</div></noscript>
+<main class="shell">
+ <div class="metrics" aria-label="Fleet overview">
+  <div class="metric"><div class="eyebrow">Fleets loaded</div><strong id="fleet-count">0</strong><small>Anonymous scopes</small></div>
+  <div class="metric"><div class="eyebrow">Drives observed</div><strong id="drive-count">0</strong><small>Latest per asset</small></div>
+  <div class="metric"><div class="eyebrow">Needs attention</div><strong id="attention-count">0</strong><small>Drive + library signals</small></div>
+  <div class="metric"><div class="eyebrow">Evidence gaps</div><strong id="gap-count">0</strong><small>Assets with missing data</small></div>
+  <div class="metric"><div class="eyebrow">Snapshots</div><strong id="report-count">0</strong><small>Loaded reports</small></div>
+ </div>
+ <details id="filters" class="filter-panel" open><summary>Load reports and filter assets</summary>
+ <section class="tools" aria-label="Dashboard controls">
+  <label class="files" for="files">Add report JSONs · local files only<input id="files" type="file" accept=".json,application/json" multiple></label>
+  <label for="search">Find an asset<input id="search" type="search" placeholder="Model, asset ID, firmware…"></label>
+  <label for="fleet">Fleet<select id="fleet"><option value="">All fleets</option></select></label>
+  <label for="kind">Type<select id="kind"><option value="">All assets</option><option value="drive">Drives</option><option value="library">Libraries</option></select></label>
+  <label for="assessment">Evidence<select id="assessment"><option value="">All evidence</option><option value="attention">Needs attention</option><option value="incomplete">Has gaps</option><option value="clear">Clear observations</option></select></label>
+  <label for="sort">Sort<select id="sort"><option value="worst">Worst score first</option><option value="best">Best score first</option><option value="name">Asset ID</option><option value="fleet">Fleet</option></select></label>
+ </section>
+ </details>
+ <p id="status" class="status" role="status" aria-live="polite">Preparing local reports…</p>
+ <div class="section-title"><h2>Asset observations</h2><span id="shown">0 assets</span></div>
+ <section id="cards" class="grid" aria-label="Drive and library health cards"></section>
+ <aside class="model"><strong>A triage score, with visible limits.</strong><p>All point weights and usage thresholds in triage-v3.0.0 are unverified heuristics. A score of 100 can have missing evidence. Grades: A 90–100 · B 75–89 · C 60–74 · D 40–59 · F 0–39. Counters are historical totals, never inferred failure rates.</p><p>Fleet summary uses the lowest asset score. Trends use dated snapshots of the same fleet + asset ID. Device-path identities can change after reconnects; confirm mapping. Reports with SYNTH-UNASSIGNED share a placeholder scope and should be assigned separate fleet labels before combining. Library full/empty status does not establish door, sensor, or complete exception health. See the package’s docs/SCORING.md for public references and the complete policy.</p><p>File picker accepts schema v3. Migrate v2 locally with <code>tapediag migrate --from-file report-v2.json</code>. The CLI dashboard command accepts v1, v2 and v3 reports.</p></aside>
+ <footer><span>tapediag v3 · Observations retained locally · No remote assets or telemetry</span><span>Read-only plans require explicit execution in the CLI.</span></footer>
+</main>
+<script id="seed" type="application/json">__REPORTS__</script>
+<script id="schema" type="application/json">__SCHEMA__</script>
+<script id="application">
+'use strict';
+(() => {
+const $ = id => document.getElementById(id);
+const schema = JSON.parse($('schema').textContent);
+const reports = [], fingerprints = new Set();
+const NS = 'http://www.w3.org/2000/svg';
+function el(tag, text, cls) { const node = document.createElement(tag); if (text !== undefined) node.textContent = text; if (cls) node.className = cls; return node; }
+function validate(value, shape = schema, path = '$') {
+ if (shape.$ref) return validate(value, schema.$defs[shape.$ref.split('/').pop()], path);
+ const fail = message => { throw new Error(path + ': ' + message); };
+ if (shape.anyOf) { for (const part of shape.anyOf) { try { validate(value, part, path); return; } catch (_) {} } fail('does not match schema'); }
+ if ('const' in shape && value !== shape.const) fail('wrong constant');
+ if (shape.enum && !shape.enum.includes(value)) fail('outside enum');
+ const types = {null:value === null, string:typeof value === 'string', boolean:typeof value === 'boolean', integer:Number.isInteger(value), number:typeof value === 'number' && Number.isFinite(value), array:Array.isArray(value), object:value !== null && typeof value === 'object' && !Array.isArray(value)};
+ if (shape.type && !(Array.isArray(shape.type) ? shape.type : [shape.type]).some(t => types[t])) fail('wrong type');
+ if (types.string) { if (value.length < (shape.minLength || 0) || value.length > (shape.maxLength || Infinity)) fail('string length'); if (shape.pattern && !(new RegExp(shape.pattern)).test(value)) fail('pattern'); if (shape.format === 'date-time' && (!/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:\.\d+)?(?:Z|[+-]\d\d:\d\d)$/.test(value) || !Number.isFinite(Date.parse(value)))) fail('invalid timestamp'); }
+ if (typeof value === 'number' && (value < (shape.minimum ?? -Infinity) || value > (shape.maximum ?? Infinity))) fail('out of bounds');
+ if (types.object && shape.properties) { for (const key of shape.required || []) if (!Object.hasOwn(value,key)) fail('missing ' + key); for (const key of Object.keys(value)) { if (!Object.hasOwn(shape.properties,key)) { if (shape.additionalProperties === false) fail('unknown ' + key); } else validate(value[key],shape.properties[key],path+'.'+key); } }
+ if (types.array && shape.items) { if (shape.uniqueItems && new Set(value.map(v => JSON.stringify(v))).size !== value.length) fail('duplicates'); value.forEach((v,i) => validate(v,shape.items,path+'['+i+']')); }
+}
+function validateReport(report) {
+ validate(report);
+ if (report.document_type !== 'report') throw new Error('Expected report JSON, not a workflow');
+ const seen = new Set(), devices = new Set(), assets = report.drives.concat(report.libraries);
+ for (const asset of assets) {
+  if (seen.has(asset.asset_id) || devices.has(asset.device)) throw new Error('Duplicate asset identity/device'); seen.add(asset.asset_id); devices.add(asset.device);
+  if (!/^\/dev\/sg\d+$/.test(asset.device)) throw new Error('Invalid generic device');
+  const h = asset.health, expected = Math.max(0,100-h.reasons.reduce((s,r)=>s+r.deduction,0));
+  const grade = expected >= 90 ? 'A' : expected >= 75 ? 'B' : expected >= 60 ? 'C' : expected >= 40 ? 'D' : 'F';
+  if (h.score !== expected || h.grade !== grade || new Set(h.reasons.map(r=>r.id)).size !== h.reasons.length) throw new Error('Inconsistent score/grade/reasons');
+  if (h.coverage !== (h.gaps.length ? 'incomplete' : 'complete') || h.assessment !== (h.reasons.length ? 'attention' : h.gaps.length ? 'unknown' : 'clear')) throw new Error('Inconsistent coverage/assessment');
+ }
+ const min = assets.length ? Math.min(...assets.map(a=>a.health.score)) : null;
+ if (report.health.score !== min || report.health.assets !== assets.length || report.health.attention !== assets.filter(a=>a.health.assessment==='attention').length) throw new Error('Inconsistent fleet health');
+}
+function add(report) {
+ validateReport(report);
+ const fingerprint = JSON.stringify(report);
+ if (!fingerprints.has(fingerprint)) { fingerprints.add(fingerprint); reports.push(report); }
+}
+function groups() {
+ const map = new Map();
+ reports.forEach((report,index) => {
+  for (const [kind, rows] of [['drive',report.drives],['library',report.libraries]]) for (const asset of rows) {
+   const key = JSON.stringify([report.fleet_id,asset.asset_id]);
+   if (!map.has(key)) map.set(key,[]);
+   map.get(key).push({asset,report,kind,index});
+  }
+ });
+ return [...map.values()].map(history => {
+  const dated = history.filter(x=>x.report.captured_at).sort((a,b)=>Date.parse(a.report.captured_at)-Date.parse(b.report.captured_at)||a.index-b.index);
+  const latest = dated.length ? dated[dated.length-1] : history[history.length-1];
+  return {...latest,history,dated};
+ });
+}
+function date(value) { return value ? value.replace('T',' ').replace('Z',' UTC') : 'Capture time unknown'; }
+function spark(group) {
+ const box = el('div',undefined,'trend');
+ const label = el('div',undefined,'trend-label'); label.append(el('span','Score history'),el('span',group.dated.length+' dated snapshots')); box.append(label);
+ const svg = document.createElementNS(NS,'svg'); svg.setAttribute('viewBox','0 0 300 60');svg.setAttribute('class','spark');svg.setAttribute('role','img');
+ const points = group.dated.map((x,i) => [group.dated.length===1?150:6+i*288/(group.dated.length-1),54-x.asset.health.score*.48]);
+ svg.setAttribute('aria-label',group.dated.length ? 'Dated scores: '+group.dated.map(x=>x.asset.health.score).join(', ') : 'No dated score trend available');
+ const line = document.createElementNS(NS,'line'); for (const [k,v] of Object.entries({x1:0,y1:54,x2:300,y2:54})) line.setAttribute(k,v);svg.append(line);
+ if (points.length) {const poly=document.createElementNS(NS,'polyline');poly.setAttribute('points',points.map(p=>p.join(',')).join(' '));svg.append(poly);for(const [cx,cy] of points){const circle=document.createElementNS(NS,'circle');circle.setAttribute('cx',cx);circle.setAttribute('cy',cy);circle.setAttribute('r','3');svg.append(circle);}}
+ box.append(svg);
+ box.append(el('div',group.dated.length ? group.dated.map(x=>x.asset.health.score).join(' → ')+' / '+date(group.dated[0].report.captured_at).slice(0,10)+' to '+date(group.dated[group.dated.length-1].report.captured_at).slice(0,10) : 'Undated observations excluded from chronological trend.','trend-text'));
+ if (group.history.length > group.dated.length) box.append(el('div',(group.history.length-group.dated.length)+' undated snapshot(s); latest dated snapshot shown when available.','trend-text'));
+ return box;
+}
+function details(title, child) { const node=el('details');node.append(el('summary',title),child);return node; }
+function card(group) {
+ const {asset:a,report:r,kind}=group,h=a.health;
+ const severity=h.score<60?'failing':h.assessment==='attention'?'attention':h.assessment==='unknown'?'unknown':'';
+ const node=el('article',undefined,'asset-card '+severity);node.dataset.assetId=a.asset_id;node.dataset.score=h.score;node.dataset.fleet=r.fleet_id;
+ const top=el('div',undefined,'card-top');const meta=el('div',undefined,'asset-meta');meta.append(el('span',r.fleet_id),el('span',kind==='drive'?'LTO drive':'Library'));top.append(meta);
+ const identity=a.inquiry||a.drive_status||{};
+ top.append(el('h3',identity.product||(kind==='library'?'Library inventory':'Unidentified drive')),el('div',a.asset_id,'asset-id'));node.append(top);
+ const row=el('div',undefined,'health-row'),score=el('div',undefined,'score');score.append(document.createTextNode(h.score),el('small',' / 100'));const right=el('div');right.append(el('span','Grade '+h.grade+' · '+(h.assessment==='attention'?'Attention':h.assessment==='unknown'?'Unknown':'Clear'),'badge '+severity),el('div',h.coverage==='complete'?'Evidence complete':h.gaps.length+' evidence gap(s)','health-note'));row.append(score,right);node.append(row,spark(group));
+ const facts=el('div',undefined,'facts');for(const [key,value] of [['Firmware',identity.revision||'Unknown'],['Device',a.device],['Captured',date(r.captured_at)],['Identity',a.identity_basis==='device-path'?'Device path · verify mapping':'Synthetic serial']]){const fact=el('div',undefined,'fact');fact.append(el('span',key),el('strong',value));facts.append(fact);}node.append(facts);
+ const evidence=el('div',undefined,'evidence');
+ if(h.reasons.length){const list=el('ul');for(const reason of h.reasons){const li=el('li',reason.condition);li.append(el('small','−'+reason.deduction+' points · heuristic · '+reason.id));for(const text of reason.evidence)li.append(el('small',text));list.append(li);}const d=details(h.reasons.length+' scoring reason(s)',list);d.open=true;evidence.append(d);}else evidence.append(el('p',h.gaps.length?'No scored faults in available observations.':'No scored faults observed.','health-note'));
+ if(h.gaps.length){const list=el('ul');h.gaps.forEach(g=>list.append(el('li',g)));const gaps=details('Missing evidence ('+h.gaps.length+')',list);gaps.className='gaps';evidence.append(gaps);}
+ if(kind==='library' && a.status){const table=el('table',undefined,'inventory');const head=el('thead'),headrow=el('tr');['Element','State','Barcode'].forEach(t=>headrow.append(el('th',t)));head.append(headrow);table.append(head);const body=el('tbody');for(const [k,rows] of [['Drive',a.status.drives],['Slot',a.status.slots],['IE',a.status.ie_ports]])for(const e of rows){const tr=el('tr');[k+' '+e.element,e.full?'Full':'Empty',e.barcode||'—'].forEach(v=>tr.append(el('td',v)));body.append(tr);}table.append(body);evidence.append(details('Inventory · '+a.status.slots.length+' slots / '+a.status.drives.length+' drive elements',table));}
+ const observed=kind==='drive'?{tapealert:a.tapealert,mam:a.mam,logpages:a.logpages}:{checks:a.checks};
+ evidence.append(details('Source observations',el('pre',JSON.stringify(observed,null,2))));node.append(evidence);return node;
+}
+function render() {
+ const all=groups(),query=$('search').value.toLowerCase(),fleet=$('fleet').value,kind=$('kind').value,assessment=$('assessment').value;
+ $('fleet-count').textContent=new Set(reports.map(r=>r.fleet_id)).size;$('drive-count').textContent=all.filter(x=>x.kind==='drive').length;$('report-count').textContent=reports.length;$('attention-count').textContent=all.filter(x=>x.asset.health.assessment==='attention').length;$('gap-count').textContent=all.filter(x=>x.asset.health.coverage==='incomplete').length;
+ const filtered=all.filter(x=>(!fleet||x.report.fleet_id===fleet)&&(!kind||x.kind===kind)&&(!assessment||(assessment==='incomplete'?x.asset.health.coverage==='incomplete':x.asset.health.assessment===assessment))&&JSON.stringify([x.asset.asset_id,x.asset.device,x.asset.inquiry,x.report.fleet_id]).toLowerCase().includes(query));
+ filtered.sort((a,b)=>{const sort=$('sort').value;return sort==='worst'?a.asset.health.score-b.asset.health.score||(b.asset.health.gaps.length-a.asset.health.gaps.length)||a.asset.asset_id.localeCompare(b.asset.asset_id):sort==='best'?b.asset.health.score-a.asset.health.score||a.asset.asset_id.localeCompare(b.asset.asset_id):sort==='fleet'?a.report.fleet_id.localeCompare(b.report.fleet_id)||a.asset.asset_id.localeCompare(b.asset.asset_id):a.asset.asset_id.localeCompare(b.asset.asset_id);});
+ $('cards').replaceChildren(...filtered.map(card));if(!filtered.length)$('cards').append(el('div',reports.length?'No assets match these filters.':'Add one or more v3 report JSON files to begin.','empty'));$('shown').textContent=filtered.length+' of '+all.length+' assets · '+(all.length-filtered.length)+' filtered out';
+}
+function fleetOptions(){const previous=$('fleet').value;$('fleet').replaceChildren(new Option('All fleets',''));[...new Set(reports.map(r=>r.fleet_id))].sort().forEach(f=>$('fleet').add(new Option(f,f)));$('fleet').value=previous;}
+function status(message,error=false){if(!error&&reports.some(r=>r.fleet_id==='SYNTH-UNASSIGNED')) message+=' Unassigned fleet scope: confirm identity before combining reports.';$('status').textContent=message;$('status').classList.toggle('error',error);}
+$('files').addEventListener('change',async event=>{
+ let added=0;const errors=[];
+ for(const file of event.target.files){try{if(file.size>16*1024*1024)throw new Error('File exceeds 16 MiB limit');const before=reports.length;add(JSON.parse(await file.text()));added+=reports.length-before;}catch(error){errors.push(file.name+': '+error.message);}}
+ fleetOptions();render();status(errors.length?errors.join(' · '):added+' new report(s) loaded locally; duplicate reports ignored.',errors.length>0);event.target.value='';
+});
+for(const id of ['search','fleet','kind','assessment','sort'])$(id).addEventListener(id==='search'?'input':'change',render);
+let printState=[];
+window.addEventListener('beforeprint',()=>{printState=[...document.querySelectorAll('details.gaps')].map(node=>[node,node.open]);printState.forEach(([node])=>node.open=true);});
+window.addEventListener('afterprint',()=>{printState.forEach(([node,open])=>node.open=open);printState=[];});
+$('print').addEventListener('click',()=>window.print());
+if(window.matchMedia('(max-width: 600px)').matches) $('filters').open=false;
+try{for(const report of JSON.parse($('seed').textContent))add(report);fleetOptions();render();status(reports.length+' report(s) loaded · all processing stays in this file.');}catch(error){render();status('Report rejected: '+error.message,true);}
+})();
+</script>
+</body>
+</html>

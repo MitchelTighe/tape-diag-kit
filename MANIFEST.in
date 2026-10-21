@@ -1,0 +1,13 @@
+include .gitignore .gitattributes Containerfile.release Containerfile.distro README.md LICENSE CONTRIBUTING.md SECURITY.md CHANGELOG.md requirements-dev.txt requirements-build.txt requirements-lint.txt Containerfile Containerfile.browser Containerfile.lint .containerignore
+recursive-include tapediag *.json
+recursive-include schema *.json
+recursive-include docs *.md *.json *.txt
+recursive-include fixtures *.txt *.json *.md
+recursive-include tests *.py
+recursive-include scripts *.py *.sh
+include bin/tapediag
+include requirements-*-rpm.txt
+include bin/dta config.example.toml
+recursive-include fixtures/dta *.toml *.xml
+recursive-include fixtures/ltfs-index *.xml
+recursive-include .github *.yml

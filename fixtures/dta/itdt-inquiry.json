@@ -1,0 +1,14 @@
+{
+  "command": "inquiry",
+  "parameter": {"pageCode": 131, "evpd": true},
+  "length": 96,
+  "data": {
+    "pageCode": 131,
+    "vendorIdentification": "IBM     ",
+    "productIdentification": "ULT3580-TD9     ",
+    "serialNumberDrive": "SYNTH-DRIVE-DTA",
+    "worldWideNodeName": "0000000000000003",
+    "relativeTargetPort": "0001",
+    "worldWidePortName": "0000000000000001"
+  }
+}

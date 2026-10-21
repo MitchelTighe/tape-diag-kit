@@ -1,0 +1,13 @@
+{
+  "devices": [
+    {
+      "device": "/dev/sg43",
+      "vendor": "IBM",
+      "product": "ULTRIUM-TD5",
+      "serial": null,
+      "product_name": null
+    }
+  ],
+  "ltfsck": "skipped: no checker or repair command is allowlisted",
+  "warnings": []
+}

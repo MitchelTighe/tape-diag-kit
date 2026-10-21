@@ -1,0 +1,13 @@
+{
+  "vendor": "SYNTH",
+  "product": "LTO-DEMO",
+  "revision": "0001",
+  "serial": "SYNTH-DRIVE-0001",
+  "identifiers": [
+    {
+      "type": "SCSI_IDENT_LUN_NAA_REG",
+      "value": "SYNTH-WWN-0001"
+    }
+  ],
+  "warnings": []
+}

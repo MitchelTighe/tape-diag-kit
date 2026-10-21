@@ -1,0 +1,34 @@
+{
+  "device": "/dev/sg10",
+  "reported_drives": 1,
+  "reported_slots": 2,
+  "reported_ie_ports": 1,
+  "drives": [
+    {
+      "element": 0,
+      "full": false,
+      "barcode": null,
+      "alternate_barcode": null,
+      "source_slot": null
+    }
+  ],
+  "slots": [
+    {
+      "element": 1,
+      "full": false,
+      "barcode": null,
+      "alternate_barcode": null,
+      "source_slot": null
+    }
+  ],
+  "ie_ports": [
+    {
+      "element": 2,
+      "full": false,
+      "barcode": null,
+      "alternate_barcode": null,
+      "source_slot": null
+    }
+  ],
+  "warnings": []
+}

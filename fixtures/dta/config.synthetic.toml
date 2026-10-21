@@ -1,0 +1,38 @@
+# Entirely fictional. Used by fake transports; no hardware endpoint exists.
+schema = 1
+[drive]
+serial = "SYNTH-DRIVE-DTA"
+manufacturer_serial = "SYNTH-PHYSICAL-DTA"
+test_barcode = "SYNTH-TEST-L9"
+wwpns = ["00:00:00:00:00:00:00:01", "00:00:00:00:00:00:00:02"]
+[library]
+url = "https://SYNTH-LIBRARY.invalid"
+partition = "SYNTH TEST"
+drive_id = "FR1/DBA1/fLTO-DRV1"
+drive_offset = 1
+home_slot = 7
+username_env = "DTA_LIBRARY_USERNAME"
+password_env = "DTA_LIBRARY_PASSWORD"
+[mover]
+ssh = "SYNTH_MOVER"
+itdt = "/opt/SYNTH/itdt"
+version = "9.6.2"
+device = "/dev/sg9"
+work_dir = "/var/tmp/SYNTH_DTA"
+timeout_seconds = 10800
+[[switches]]
+name = "SYNTH_A"
+ssh = "SYNTH_SWITCH_A"
+fabric = "SYNTH_FABRIC_A"
+configuration = "SYNTH_CFG_A"
+diagnostic_zones = ["SYNTH_DIAG_A"]
+ports = ["1,1"]
+removals = [{zone = "SYNTH_PROD_A", member = "SYNTH_DRIVE_A"}]
+[[switches]]
+name = "SYNTH_B"
+ssh = "SYNTH_SWITCH_B"
+fabric = "SYNTH_FABRIC_B"
+configuration = "SYNTH_CFG_B"
+diagnostic_zones = ["SYNTH_DIAG_B"]
+ports = ["2,1"]
+removals = [{zone = "SYNTH_PROD_B", member = "SYNTH_DRIVE_B"}]

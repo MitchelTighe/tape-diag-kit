@@ -1,0 +1,4 @@
+Scanning SCSI Bus ...
+#0 /dev/sg10 - [3573-SYNTH]-[0001] S/N:SYNTH-CHANGER H9-B0-T2-L1 (Generic-Device)
+#1 /dev/sg9 - [ULT3580-TD9]-[SYN1] S/N:SYNTH-DRIVE-DTA H9-B0-T1-L0 Changer:SYNTH-CHANGER (Generic-Device)
+Exit with code: 0

@@ -1,0 +1,2 @@
+# Original synthetic page; see docs/log-trends.md
+31 00 00 20 00 01 00 04 00 1e 80 80 00 02 00 04 00 00 00 00 00 03 00 04 00 1e 84 80 00 04 00 04 00 00 00 00

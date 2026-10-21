@@ -1,0 +1,5 @@
+Data Transfer Element:	Empty
+Storage Element 7:	Full
+Storage Element 11:	Full
+Storage Element 15:	Full
+Storage Element 23:	Full

@@ -1,0 +1,5 @@
+Vendor identification: SYNTH
+Product identification: LTO-DEMO
+Product revision level: 0001
+SCSI_SERIAL=SYNTH-DRIVE-0001
+SCSI_IDENT_LUN_NAA_REG=SYNTH-WWN-0001

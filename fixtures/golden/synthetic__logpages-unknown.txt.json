@@ -1,0 +1,26 @@
+{
+  "pages": [
+    {
+      "page": "0x3f",
+      "subpage": null,
+      "name": "SYNTH vendor diagnostic log page",
+      "known": false,
+      "parameters": [
+        {
+          "name": "Parameter code",
+          "value": 61441,
+          "unit": null,
+          "raw": "0xf001"
+        }
+      ],
+      "supported_pages": [],
+      "raw_lines": [
+        "00 01 02 fe"
+      ]
+    }
+  ],
+  "preamble": [],
+  "warnings": [
+    "unknown pages retained without interpreting vendor-specific bytes"
+  ]
+}

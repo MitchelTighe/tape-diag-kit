@@ -1,0 +1,7 @@
+FROM docker.io/library/python:3.13.9-slim-bookworm
+ENV PYTHONDONTWRITEBYTECODE=1 PIP_DISABLE_PIP_VERSION_CHECK=1
+WORKDIR /src
+COPY requirements-lint.txt /src/
+RUN python -m pip install --no-cache-dir -r requirements-lint.txt
+COPY . /src/
+CMD ["sh", "scripts/check-lint.sh"]

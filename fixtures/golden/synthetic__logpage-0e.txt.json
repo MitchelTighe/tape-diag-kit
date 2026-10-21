@@ -1,0 +1,34 @@
+{
+  "pages": [
+    {
+      "page": "0x0e",
+      "subpage": null,
+      "name": "Start-stop cycle counter log page",
+      "known": true,
+      "parameters": [
+        {
+          "name": "Specified cycle count over device lifetime",
+          "value": 100000,
+          "unit": null,
+          "raw": "100000"
+        },
+        {
+          "name": "Accumulated start-stop cycles",
+          "value": 120,
+          "unit": null,
+          "raw": "120"
+        },
+        {
+          "name": "Accumulated load-unload cycles",
+          "value": 42,
+          "unit": null,
+          "raw": "42"
+        }
+      ],
+      "supported_pages": [],
+      "raw_lines": []
+    }
+  ],
+  "preamble": [],
+  "warnings": []
+}

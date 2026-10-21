@@ -1,0 +1,2 @@
+SYNTHETIC fixture: no vendor executable or hardware was used.
+Exit with code: 0

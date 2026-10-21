@@ -1,0 +1,28 @@
+{
+  "pages": [
+    {
+      "page": "0x0c",
+      "subpage": null,
+      "name": "Sequential-access device log page",
+      "known": true,
+      "parameters": [
+        {
+          "name": "Data bytes received with WRITE commands",
+          "value": 2400000,
+          "unit": null,
+          "raw": "2400000"
+        },
+        {
+          "name": "Data bytes read with READ commands",
+          "value": 4800000,
+          "unit": null,
+          "raw": "4800000"
+        }
+      ],
+      "supported_pages": [],
+      "raw_lines": []
+    }
+  ],
+  "preamble": [],
+  "warnings": []
+}

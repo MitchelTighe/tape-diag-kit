@@ -1,0 +1,12 @@
+standard INQUIRY:
+  PQual=0 Device_type=1 RMB=1 version=0x06 [SPC-4]
+Vendor identification: SYNTH
+Product identification: LTO-DEMO
+Product revision level: 0001
+sg_turs: device is ready
+SCSI 2 tape drive:
+File number=2, block number=17, partition=0.
+Tape block size 0 bytes. Density code 0x5e (LTO-8).
+Soft error count since last status=0
+General status bits on (45000000):
+ BOT ONLINE WR_PROT

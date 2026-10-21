@@ -1,0 +1,7 @@
+Attribute values:
+  Load count: 42
+  Total MiB written in medium life: 24000
+  Total MiB read in medium life: 48000
+  Total MiB written in current/last load: 120
+  Total MiB read in current/last load: 240
+  Medium serial number: SYNTH-MEDIUM-0001

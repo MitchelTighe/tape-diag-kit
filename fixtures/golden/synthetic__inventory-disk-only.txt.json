@@ -1,0 +1,7 @@
+{
+  "source": "lsscsi",
+  "devices": [],
+  "warnings": [
+    "no tape/changer entries recognized (capture may contain other device types)"
+  ]
+}

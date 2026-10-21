@@ -1,0 +1,17 @@
+{
+  "adapter": "IBM ITDT saved text only",
+  "devices": [],
+  "inquiry": {
+    "vendor": null,
+    "product": null,
+    "revision": null
+  },
+  "tapealert": null,
+  "warnings": [
+    "no supported ITDT records recognized; custom scan formats and binary dumps are unsupported"
+  ],
+  "raw_lines": [
+    "SYNTH fixture: incomplete saved scan",
+    "SYNTH fixture: device rows deliberately absent"
+  ]
+}

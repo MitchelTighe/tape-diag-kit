@@ -1,0 +1,53 @@
+{
+  "attributes": [
+    {
+      "id": "0x0003",
+      "name": "Load count",
+      "value": 42,
+      "unit": "loads",
+      "redacted": false,
+      "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+    },
+    {
+      "id": "0x0220",
+      "name": "Total MiB written in medium life",
+      "value": 24000,
+      "unit": "MiB",
+      "redacted": false,
+      "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+    },
+    {
+      "id": "0x0221",
+      "name": "Total MiB read in medium life",
+      "value": 48000,
+      "unit": "MiB",
+      "redacted": false,
+      "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+    },
+    {
+      "id": "0x0222",
+      "name": "Total MiB written in current/last load",
+      "value": 120,
+      "unit": "MiB",
+      "redacted": false,
+      "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+    },
+    {
+      "id": "0x0223",
+      "name": "Total MiB read in current/last load",
+      "value": 240,
+      "unit": "MiB",
+      "redacted": false,
+      "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+    },
+    {
+      "id": "0x0401",
+      "name": "Medium serial number",
+      "value": "SYNTH-MEDIUM-0001",
+      "unit": null,
+      "redacted": true,
+      "source": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_read_attr.c"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,49 @@
+{
+  "device": null,
+  "reported_drives": null,
+  "reported_slots": null,
+  "reported_ie_ports": null,
+  "drives": [
+    {
+      "element": 0,
+      "full": false,
+      "barcode": null,
+      "alternate_barcode": null,
+      "source_slot": null
+    }
+  ],
+  "slots": [
+    {
+      "element": 7,
+      "full": true,
+      "barcode": null,
+      "alternate_barcode": null,
+      "source_slot": null
+    },
+    {
+      "element": 11,
+      "full": true,
+      "barcode": null,
+      "alternate_barcode": null,
+      "source_slot": null
+    },
+    {
+      "element": 15,
+      "full": true,
+      "barcode": null,
+      "alternate_barcode": null,
+      "source_slot": null
+    },
+    {
+      "element": 23,
+      "full": true,
+      "barcode": null,
+      "alternate_barcode": null,
+      "source_slot": null
+    }
+  ],
+  "ie_ports": [],
+  "warnings": [
+    "missing storage changer header"
+  ]
+}

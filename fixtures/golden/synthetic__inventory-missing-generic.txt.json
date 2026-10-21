@@ -1,0 +1,16 @@
+{
+  "source": "lsscsi",
+  "devices": [
+    {
+      "kind": "drive",
+      "address": "9:0:1:0",
+      "vendor": "SYNTH",
+      "model": "LTO-DEMO",
+      "revision": "0001",
+      "device": "/dev/st0",
+      "generic_device": null,
+      "nonrewinding_device": "/dev/nst0"
+    }
+  ],
+  "warnings": []
+}

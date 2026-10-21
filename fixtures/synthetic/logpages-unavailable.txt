@@ -1,0 +1,3 @@
+Temperature log page [0xd]:
+  Current temperature = <not available>
+  Reference temperature = 60 C

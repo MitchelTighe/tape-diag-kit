@@ -1,0 +1,36 @@
+{
+  "adapter": "IBM ITDT saved text only",
+  "devices": [
+    {
+      "index": 0,
+      "device": "/dev/IBMtape0n",
+      "model": "LTO-DEMO",
+      "revision": "0001",
+      "serial": "SYNTH-DRIVE-0001",
+      "address": "9:0:1:0",
+      "driver": "IBM-Device"
+    },
+    {
+      "index": 1,
+      "device": "/dev/sg10",
+      "model": "CHANGER-DEMO",
+      "revision": "0001",
+      "serial": "SYNTH-CHANGER-0001",
+      "address": "9:0:2:0",
+      "driver": "Generic-Device"
+    }
+  ],
+  "inquiry": {
+    "vendor": null,
+    "product": null,
+    "revision": null
+  },
+  "tapealert": null,
+  "warnings": [],
+  "raw_lines": [
+    "Scanning SCSI Bus ...",
+    "#0 /dev/IBMtape0n - [LTO-DEMO]-[0001] S/N:SYNTH-DRIVE-0001 H9-B0-T1-L0  (IBM-Device)",
+    "#1 /dev/sg10 - [CHANGER-DEMO]-[0001] S/N:SYNTH-CHANGER-0001 H9-B0-T2-L0  (Generic-Device)",
+    "Exit with code: 0"
+  ]
+}

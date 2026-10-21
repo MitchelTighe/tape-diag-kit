@@ -1,0 +1,1345 @@
+{
+  "retrieved": "2026-10-18",
+  "entries": [
+    {
+      "path": "synthetic/inquiry-identity.txt",
+      "kind": "synthetic",
+      "url": "https://doug-gilbert.github.io/sg3_utils.html",
+      "license": "MIT",
+      "notes": "Independently authored synthetic replacement; public URL is a format reference only. No upstream text or operational capture retained."
+    },
+    {
+      "path": "golden/synthetic__inquiry-identity.txt.json",
+      "kind": "golden",
+      "url": "https://doug-gilbert.github.io/sg3_utils.html",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/inquiry-identity.txt"
+      ],
+      "notes": "Independently authored synthetic replacement; public URL is a format reference only. No upstream text or operational capture retained."
+    },
+    {
+      "path": "synthetic/library-legacy.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.doc",
+      "license": "MIT",
+      "notes": "Independently authored synthetic replacement; public URL is a format reference only. No upstream text or operational capture retained."
+    },
+    {
+      "path": "golden/synthetic__library-legacy.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.doc",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/library-legacy.txt"
+      ],
+      "notes": "Independently authored synthetic replacement; public URL is a format reference only. No upstream text or operational capture retained."
+    },
+    {
+      "path": "public/ltfs-device-prefix.txt",
+      "kind": "public-excerpt",
+      "url": "https://github.com/LinearTapeFileSystem/ltfs/blob/main/README.md",
+      "license": "BSD-3-Clause",
+      "notes": "Exact leading fields of the first device-list record, ending before Serial Number; truncated on purpose. Upstream license: https://github.com/LinearTapeFileSystem/ltfs/blob/master/LICENSE ."
+    },
+    {
+      "path": "golden/public__ltfs-device-prefix.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/LinearTapeFileSystem/ltfs/blob/main/README.md",
+      "license": "BSD-3-Clause",
+      "derived_from": [
+        "public/ltfs-device-prefix.txt"
+      ],
+      "notes": "Reviewed expected parse of public/ltfs-device-prefix.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/itdt-no-records.txt",
+      "kind": "synthetic",
+      "url": "https://www.ibm.com/support/pages/system/files/inline-files/IBM%20Tape%20Device%20Drivers%20and%20Diagnostic%20Tool%20Users%20Guide.pdf",
+      "license": "MIT",
+      "notes": "Independently authored synthetic replacement; public URL is a format reference only. No upstream text or operational capture retained."
+    },
+    {
+      "path": "golden/synthetic__itdt-no-records.txt.json",
+      "kind": "golden",
+      "url": "https://www.ibm.com/support/pages/system/files/inline-files/IBM%20Tape%20Device%20Drivers%20and%20Diagnostic%20Tool%20Users%20Guide.pdf",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/itdt-no-records.txt"
+      ],
+      "notes": "Independently authored synthetic replacement; public URL is a format reference only. No upstream text or operational capture retained."
+    },
+    {
+      "path": "synthetic/inventory-disk-only.txt",
+      "kind": "synthetic",
+      "url": "https://doug-gilbert.github.io/scsi/lsscsi.html",
+      "license": "MIT",
+      "notes": "Independently authored synthetic replacement; public URL is a format reference only. No upstream text or operational capture retained."
+    },
+    {
+      "path": "golden/synthetic__inventory-disk-only.txt.json",
+      "kind": "golden",
+      "url": "https://doug-gilbert.github.io/scsi/lsscsi.html",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/inventory-disk-only.txt"
+      ],
+      "notes": "Independently authored synthetic replacement; public URL is a format reference only. No upstream text or operational capture retained."
+    },
+    {
+      "path": "synthetic/inventory.txt",
+      "kind": "synthetic",
+      "url": "https://doug-gilbert.github.io/scsi/lsscsi.html",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__inventory.txt.json",
+      "kind": "golden",
+      "url": "https://doug-gilbert.github.io/scsi/lsscsi.html",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/inventory.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/inventory.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/inventory-missing-generic.txt",
+      "kind": "synthetic",
+      "url": "https://doug-gilbert.github.io/scsi/lsscsi.html",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__inventory-missing-generic.txt.json",
+      "kind": "golden",
+      "url": "https://doug-gilbert.github.io/scsi/lsscsi.html",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/inventory-missing-generic.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/inventory-missing-generic.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/library.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__library.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/library.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/library.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/library-empty.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__library-empty.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/library-empty.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/library-empty.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/library-truncated.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__library-truncated.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/library-truncated.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/library-truncated.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/tapealert-named.txt",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__tapealert-named.txt.json",
+      "kind": "golden",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/tapealert-named.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/tapealert-named.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/tapealert-numeric.txt",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__tapealert-numeric.txt.json",
+      "kind": "golden",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/tapealert-numeric.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/tapealert-numeric.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/tapealert-clear.txt",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__tapealert-clear.txt.json",
+      "kind": "golden",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/tapealert-clear.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/tapealert-clear.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/tapealert-set.txt",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__tapealert-set.txt.json",
+      "kind": "golden",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/tapealert-set.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/tapealert-set.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/logpages.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__logpages.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/logpages.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/logpages.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/logpages-unknown.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__logpages-unknown.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/logpages-unknown.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/logpages-unknown.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/logpages-unavailable.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__logpages-unavailable.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/logpages-unavailable.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/logpages-unavailable.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/drive-status.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/iustin/mt-st/blob/main/mt.1",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__drive-status.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/iustin/mt-st/blob/main/mt.1",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/drive-status.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/drive-status.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/drive-not-ready.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/iustin/mt-st/blob/main/mt.1",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__drive-not-ready.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/iustin/mt-st/blob/main/mt.1",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/drive-not-ready.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/drive-not-ready.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/ltfs.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/LinearTapeFileSystem/ltfs/blob/main/README.md",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__ltfs.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/LinearTapeFileSystem/ltfs/blob/main/README.md",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/ltfs.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/ltfs.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/itdt-scan.txt",
+      "kind": "synthetic",
+      "url": "https://www.ibm.com/support/pages/system/files/inline-files/IBM%20Tape%20Device%20Drivers%20and%20Diagnostic%20Tool%20Users%20Guide.pdf",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__itdt-scan.txt.json",
+      "kind": "golden",
+      "url": "https://www.ibm.com/support/pages/system/files/inline-files/IBM%20Tape%20Device%20Drivers%20and%20Diagnostic%20Tool%20Users%20Guide.pdf",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/itdt-scan.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/itdt-scan.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/itdt-inquiry.txt",
+      "kind": "synthetic",
+      "url": "https://www.ibm.com/support/pages/system/files/inline-files/IBM%20Tape%20Device%20Drivers%20and%20Diagnostic%20Tool%20Users%20Guide.pdf",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__itdt-inquiry.txt.json",
+      "kind": "golden",
+      "url": "https://www.ibm.com/support/pages/system/files/inline-files/IBM%20Tape%20Device%20Drivers%20and%20Diagnostic%20Tool%20Users%20Guide.pdf",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/itdt-inquiry.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/itdt-inquiry.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/itdt-tapealert.txt",
+      "kind": "synthetic",
+      "url": "https://www.ibm.com/support/pages/system/files/inline-files/IBM%20Tape%20Device%20Drivers%20and%20Diagnostic%20Tool%20Users%20Guide.pdf",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__itdt-tapealert.txt.json",
+      "kind": "golden",
+      "url": "https://www.ibm.com/support/pages/system/files/inline-files/IBM%20Tape%20Device%20Drivers%20and%20Diagnostic%20Tool%20Users%20Guide.pdf",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/itdt-tapealert.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/itdt-tapealert.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "synthetic/unrecognized.txt",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "notes": "Original synthetic text; public URL documents the format only. No live-system capture or verbatim identifying values."
+    },
+    {
+      "path": "golden/synthetic__unrecognized.txt.json",
+      "kind": "golden",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/unrecognized.txt"
+      ],
+      "notes": "Reviewed expected parse of synthetic/unrecognized.txt; original expectations with source excerpt status retained."
+    },
+    {
+      "path": "sample-host/drives/sg9/drive-status.txt",
+      "kind": "synthetic-copy",
+      "url": "https://github.com/iustin/mt-st/blob/main/mt.1",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/drive-status.txt"
+      ],
+      "notes": "Byte-for-byte copy of the named synthetic fixture. Directory name denotes an imaginary capture set."
+    },
+    {
+      "path": "sample-host/drives/sg9/logpages.txt",
+      "kind": "synthetic-copy",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/logpages.txt"
+      ],
+      "notes": "Byte-for-byte copy of the named synthetic fixture. Directory name denotes an imaginary capture set."
+    },
+    {
+      "path": "sample-host/drives/sg9/tapealert.txt",
+      "kind": "synthetic-copy",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/tapealert-set.txt"
+      ],
+      "notes": "Byte-for-byte copy of the named synthetic fixture. Directory name denotes an imaginary capture set."
+    },
+    {
+      "path": "sample-host/inventory.txt",
+      "kind": "synthetic-copy",
+      "url": "https://doug-gilbert.github.io/scsi/lsscsi.html",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/inventory.txt"
+      ],
+      "notes": "Byte-for-byte copy of the named synthetic fixture. Directory name denotes an imaginary capture set."
+    },
+    {
+      "path": "sample-host/itdt.txt",
+      "kind": "synthetic-copy",
+      "url": "https://www.ibm.com/support/pages/system/files/inline-files/IBM%20Tape%20Device%20Drivers%20and%20Diagnostic%20Tool%20Users%20Guide.pdf",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/itdt-scan.txt"
+      ],
+      "notes": "Byte-for-byte copy of the named synthetic fixture. Directory name denotes an imaginary capture set."
+    },
+    {
+      "path": "sample-host/libraries/sg10/status.txt",
+      "kind": "synthetic-copy",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/library.txt"
+      ],
+      "notes": "Byte-for-byte copy of the named synthetic fixture. Directory name denotes an imaginary capture set."
+    },
+    {
+      "path": "sample-host/ltfs.txt",
+      "kind": "synthetic-copy",
+      "url": "https://github.com/LinearTapeFileSystem/ltfs/blob/main/README.md",
+      "license": "MIT",
+      "derived_from": [
+        "synthetic/ltfs.txt"
+      ],
+      "notes": "Byte-for-byte copy of the named synthetic fixture. Directory name denotes an imaginary capture set."
+    },
+    {
+      "path": "golden/sample-host.report.json",
+      "kind": "golden",
+      "url": "https://example.org/tapediag/schema/tapediag-report.v1.json",
+      "license": "MIT",
+      "derived_from": [
+        "sample-host/drives/sg9/drive-status.txt",
+        "sample-host/drives/sg9/logpages.txt",
+        "sample-host/drives/sg9/tapealert.txt",
+        "sample-host/inventory.txt",
+        "sample-host/itdt.txt",
+        "sample-host/libraries/sg10/status.txt",
+        "sample-host/ltfs.txt"
+      ],
+      "notes": "Expected v1 assembly of sample-host; schema URL is a synthetic identifier, not a service."
+    },
+    {
+      "path": "golden/scenario-cleaning-needed.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture.",
+      "derived_from": [
+        "scenarios/cleaning-needed/drives/sg9/drive-status.txt",
+        "scenarios/cleaning-needed/drives/sg9/inquiry.txt",
+        "scenarios/cleaning-needed/drives/sg9/logpages.txt",
+        "scenarios/cleaning-needed/drives/sg9/mam.txt",
+        "scenarios/cleaning-needed/drives/sg9/tapealert.txt",
+        "scenarios/cleaning-needed/inventory.txt",
+        "scenarios/cleaning-needed/libraries/sg10/status.txt",
+        "scenarios/cleaning-needed/topology.txt"
+      ],
+      "references": [
+        "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+        "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1"
+      ]
+    },
+    {
+      "path": "golden/scenario-degraded-media.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture.",
+      "derived_from": [
+        "scenarios/degraded-media/drives/sg9/drive-status.txt",
+        "scenarios/degraded-media/drives/sg9/inquiry.txt",
+        "scenarios/degraded-media/drives/sg9/logpages.txt",
+        "scenarios/degraded-media/drives/sg9/mam.txt",
+        "scenarios/degraded-media/drives/sg9/tapealert.txt",
+        "scenarios/degraded-media/inventory.txt",
+        "scenarios/degraded-media/libraries/sg10/status.txt",
+        "scenarios/degraded-media/topology.txt"
+      ],
+      "references": [
+        "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+        "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1"
+      ]
+    },
+    {
+      "path": "golden/scenario-healthy.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture.",
+      "derived_from": [
+        "scenarios/healthy/drives/sg9/drive-status.txt",
+        "scenarios/healthy/drives/sg9/inquiry.txt",
+        "scenarios/healthy/drives/sg9/logpages.txt",
+        "scenarios/healthy/drives/sg9/mam.txt",
+        "scenarios/healthy/drives/sg9/tapealert.txt",
+        "scenarios/healthy/inventory.txt",
+        "scenarios/healthy/libraries/sg10/status.txt",
+        "scenarios/healthy/topology.txt"
+      ],
+      "references": [
+        "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+        "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1"
+      ]
+    },
+    {
+      "path": "golden/synthetic__inquiry-vpd.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_inq.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture.",
+      "derived_from": [
+        "synthetic/inquiry-vpd.txt"
+      ]
+    },
+    {
+      "path": "golden/synthetic__library-inconsistent.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture.",
+      "derived_from": [
+        "synthetic/library-inconsistent.txt"
+      ]
+    },
+    {
+      "path": "golden/synthetic__logpage-02.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture.",
+      "derived_from": [
+        "synthetic/logpage-02.txt"
+      ]
+    },
+    {
+      "path": "golden/synthetic__logpage-03.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture.",
+      "derived_from": [
+        "synthetic/logpage-03.txt"
+      ]
+    },
+    {
+      "path": "golden/synthetic__logpage-06.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture.",
+      "derived_from": [
+        "synthetic/logpage-06.txt"
+      ]
+    },
+    {
+      "path": "golden/synthetic__logpage-0c.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture.",
+      "derived_from": [
+        "synthetic/logpage-0c.txt"
+      ]
+    },
+    {
+      "path": "golden/synthetic__logpage-0d.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture.",
+      "derived_from": [
+        "synthetic/logpage-0d.txt"
+      ]
+    },
+    {
+      "path": "golden/synthetic__logpage-0e.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture.",
+      "derived_from": [
+        "synthetic/logpage-0e.txt"
+      ]
+    },
+    {
+      "path": "golden/synthetic__logpage-12.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture.",
+      "derived_from": [
+        "synthetic/logpage-12.txt"
+      ]
+    },
+    {
+      "path": "golden/synthetic__logpage-14.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture.",
+      "derived_from": [
+        "synthetic/logpage-14.txt"
+      ]
+    },
+    {
+      "path": "golden/synthetic__mam.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_read_attr.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture.",
+      "derived_from": [
+        "synthetic/mam.txt"
+      ]
+    },
+    {
+      "path": "golden/synthetic__topology.txt.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_map.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture.",
+      "derived_from": [
+        "synthetic/topology.txt"
+      ]
+    },
+    {
+      "path": "sample-host/drives/sg9/inquiry.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_inq.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "sample-host/drives/sg9/mam.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_read_attr.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "sample-host/topology.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_map.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/cleaning-needed/drives/sg9/drive-status.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/cleaning-needed/drives/sg9/inquiry.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_inq.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/cleaning-needed/drives/sg9/logpages.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/cleaning-needed/drives/sg9/mam.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_read_attr.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/cleaning-needed/drives/sg9/tapealert.txt",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/cleaning-needed/inventory.txt",
+      "kind": "synthetic",
+      "url": "https://doug-gilbert.github.io/scsi/lsscsi.html",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/cleaning-needed/libraries/sg10/status.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/cleaning-needed/topology.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_map.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/degraded-media/drives/sg9/drive-status.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/degraded-media/drives/sg9/inquiry.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_inq.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/degraded-media/drives/sg9/logpages.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/degraded-media/drives/sg9/mam.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_read_attr.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/degraded-media/drives/sg9/tapealert.txt",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/degraded-media/inventory.txt",
+      "kind": "synthetic",
+      "url": "https://doug-gilbert.github.io/scsi/lsscsi.html",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/degraded-media/libraries/sg10/status.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/degraded-media/topology.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_map.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/healthy/drives/sg9/drive-status.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/healthy/drives/sg9/inquiry.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_inq.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/healthy/drives/sg9/logpages.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/healthy/drives/sg9/mam.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_read_attr.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/healthy/drives/sg9/tapealert.txt",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/healthy/inventory.txt",
+      "kind": "synthetic",
+      "url": "https://doug-gilbert.github.io/scsi/lsscsi.html",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/healthy/libraries/sg10/status.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "scenarios/healthy/topology.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_map.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "synthetic/inquiry-vpd.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_inq.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "synthetic/library-inconsistent.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.1",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "synthetic/logpage-02.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "synthetic/logpage-03.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "synthetic/logpage-06.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "synthetic/logpage-0c.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "synthetic/logpage-0d.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "synthetic/logpage-0e.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "synthetic/logpage-12.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "synthetic/logpage-14.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "synthetic/mam.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_read_attr.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "synthetic/topology.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_map.8",
+      "license": "MIT",
+      "notes": "Original synthetic v2 observation or independently asserted expected parse; no device capture."
+    },
+    {
+      "path": "golden/v1-original-report.json",
+      "kind": "golden",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/doc/sg_logs.8",
+      "license": "MIT",
+      "notes": "Unchanged original synthetic v1 report (tool 0.1.0) from baseline artifacts/sample-report.json, retained for backward compatibility, including the original captured density description."
+    },
+    {
+      "path": "fleets/synth-alpha-20261016.json",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-213r3.pdf",
+      "license": "MIT (original synthetic data)",
+      "notes": "Deterministically generated fictional LTO-7/8/9 fleet and 48-slot library; public observation definitions in docs/SCORING.md; all values/identities invented. Accessed 2026-10-18."
+    },
+    {
+      "path": "fleets/synth-alpha-20261017.json",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-213r3.pdf",
+      "license": "MIT (original synthetic data)",
+      "notes": "Deterministically generated fictional LTO-7/8/9 fleet and 48-slot library; public observation definitions in docs/SCORING.md; all values/identities invented. Accessed 2026-10-18."
+    },
+    {
+      "path": "fleets/synth-alpha-20261018.json",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-213r3.pdf",
+      "license": "MIT (original synthetic data)",
+      "notes": "Deterministically generated fictional LTO-7/8/9 fleet and 48-slot library; public observation definitions in docs/SCORING.md; all values/identities invented. Accessed 2026-10-18."
+    },
+    {
+      "path": "fleets/synth-bravo-20261016.json",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-213r3.pdf",
+      "license": "MIT (original synthetic data)",
+      "notes": "Deterministically generated fictional LTO-7/8/9 fleet and 48-slot library; public observation definitions in docs/SCORING.md; all values/identities invented. Accessed 2026-10-18."
+    },
+    {
+      "path": "fleets/synth-bravo-20261017.json",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-213r3.pdf",
+      "license": "MIT (original synthetic data)",
+      "notes": "Deterministically generated fictional LTO-7/8/9 fleet and 48-slot library; public observation definitions in docs/SCORING.md; all values/identities invented. Accessed 2026-10-18."
+    },
+    {
+      "path": "fleets/synth-bravo-20261018.json",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-213r3.pdf",
+      "license": "MIT (original synthetic data)",
+      "notes": "Deterministically generated fictional LTO-7/8/9 fleet and 48-slot library; public observation definitions in docs/SCORING.md; all values/identities invented. Accessed 2026-10-18."
+    },
+    {
+      "path": "fleets/synth-charlie-20261016.json",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-213r3.pdf",
+      "license": "MIT (original synthetic data)",
+      "notes": "Deterministically generated fictional LTO-7/8/9 fleet and 48-slot library; public observation definitions in docs/SCORING.md; all values/identities invented. Accessed 2026-10-18."
+    },
+    {
+      "path": "fleets/synth-charlie-20261017.json",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-213r3.pdf",
+      "license": "MIT (original synthetic data)",
+      "notes": "Deterministically generated fictional LTO-7/8/9 fleet and 48-slot library; public observation definitions in docs/SCORING.md; all values/identities invented. Accessed 2026-10-18."
+    },
+    {
+      "path": "fleets/synth-charlie-20261018.json",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-213r3.pdf",
+      "license": "MIT (original synthetic data)",
+      "notes": "Deterministically generated fictional LTO-7/8/9 fleet and 48-slot library; public observation definitions in docs/SCORING.md; all values/identities invented. Accessed 2026-10-18."
+    },
+    {
+      "path": "mhvtl-synthetic/drives/sg31/drive-status.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/markh794/mhvtl",
+      "license": "MIT",
+      "notes": "Original invented saved-text walkthrough; derived from original healthy scenario. No mhvtl process, kernel module, device or captured output.",
+      "derived_from": [
+        "scenarios/healthy/drives/sg9/drive-status.txt"
+      ]
+    },
+    {
+      "path": "mhvtl-synthetic/drives/sg31/inquiry.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/markh794/mhvtl",
+      "license": "MIT",
+      "notes": "Original invented saved-text walkthrough; derived from original healthy scenario. No mhvtl process, kernel module, device or captured output.",
+      "derived_from": [
+        "scenarios/healthy/drives/sg9/inquiry.txt"
+      ]
+    },
+    {
+      "path": "mhvtl-synthetic/drives/sg31/logpages.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/markh794/mhvtl",
+      "license": "MIT",
+      "notes": "Original invented saved-text walkthrough; derived from original healthy scenario. No mhvtl process, kernel module, device or captured output.",
+      "derived_from": [
+        "scenarios/healthy/drives/sg9/logpages.txt"
+      ]
+    },
+    {
+      "path": "mhvtl-synthetic/drives/sg31/mam.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/markh794/mhvtl",
+      "license": "MIT",
+      "notes": "Original invented saved-text walkthrough; derived from original healthy scenario. No mhvtl process, kernel module, device or captured output.",
+      "derived_from": [
+        "scenarios/healthy/drives/sg9/mam.txt"
+      ]
+    },
+    {
+      "path": "mhvtl-synthetic/drives/sg31/tapealert.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/markh794/mhvtl",
+      "license": "MIT",
+      "notes": "Original invented saved-text walkthrough; derived from original healthy scenario. No mhvtl process, kernel module, device or captured output.",
+      "derived_from": [
+        "scenarios/healthy/drives/sg9/tapealert.txt"
+      ]
+    },
+    {
+      "path": "mhvtl-synthetic/inventory.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/markh794/mhvtl",
+      "license": "MIT",
+      "notes": "Original invented saved-text walkthrough; derived from original healthy scenario. No mhvtl process, kernel module, device or captured output.",
+      "derived_from": [
+        "scenarios/healthy/inventory.txt"
+      ]
+    },
+    {
+      "path": "mhvtl-synthetic/libraries/sg40/status.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/markh794/mhvtl",
+      "license": "MIT",
+      "notes": "Original invented saved-text walkthrough; derived from original healthy scenario. No mhvtl process, kernel module, device or captured output.",
+      "derived_from": [
+        "scenarios/healthy/libraries/sg10/status.txt"
+      ]
+    },
+    {
+      "path": "mhvtl-synthetic/topology.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/markh794/mhvtl",
+      "license": "MIT",
+      "notes": "Original invented saved-text walkthrough; derived from original healthy scenario. No mhvtl process, kernel module, device or captured output.",
+      "derived_from": [
+        "scenarios/healthy/topology.txt"
+      ]
+    },
+    {
+      "path": "dta/config.synthetic.toml",
+      "url": "https://www.ibm.com/support/pages/sites/default/files/inline-files/IBM%20Tape%20Device%20Drivers%20and%20Diagnostic%20Tool%20User%27s%20Guide%2020251028.pdf",
+      "license": "MIT",
+      "accessed": "2026-10-18",
+      "notes": "Original synthetic DTA fixture; vendor grammar reference only. Zero-prefix WWPNs are fictional. No captured site output.",
+      "kind": "synthetic"
+    },
+    {
+      "path": "dta/drive-list.xml",
+      "url": "https://support.spectralogic.com/documentation/default-source/user-guides/xml-commandreference-v12.8.07.pdf?sfvrsn=42f961ba_14",
+      "license": "MIT",
+      "accessed": "2026-10-18",
+      "notes": "Original synthetic DTA fixture; vendor grammar reference only. Zero-prefix WWPNs are fictional. No captured site output.",
+      "kind": "synthetic"
+    },
+    {
+      "path": "dta/inventory-home.xml",
+      "url": "https://support.spectralogic.com/documentation/default-source/user-guides/xml-commandreference-v12.8.07.pdf?sfvrsn=42f961ba_14",
+      "license": "MIT",
+      "accessed": "2026-10-18",
+      "notes": "Original synthetic DTA fixture; vendor grammar reference only. Zero-prefix WWPNs are fictional. No captured site output.",
+      "kind": "synthetic"
+    },
+    {
+      "path": "dta/inventory-loaded.xml",
+      "url": "https://support.spectralogic.com/documentation/default-source/user-guides/xml-commandreference-v12.8.07.pdf?sfvrsn=42f961ba_14",
+      "license": "MIT",
+      "accessed": "2026-10-18",
+      "notes": "Original synthetic DTA fixture; vendor grammar reference only. Zero-prefix WWPNs are fictional. No captured site output.",
+      "kind": "synthetic"
+    },
+    {
+      "path": "dta/itdt-inquiry.json",
+      "url": "https://www.ibm.com/support/pages/sites/default/files/inline-files/IBM%20Tape%20Device%20Drivers%20and%20Diagnostic%20Tool%20User%27s%20Guide%2020251028.pdf",
+      "license": "MIT",
+      "accessed": "2026-10-18",
+      "notes": "Original synthetic DTA fixture; vendor grammar reference only. Zero-prefix WWPNs are fictional. No captured site output.",
+      "kind": "synthetic"
+    },
+    {
+      "path": "dta/itdt-scan.txt",
+      "url": "https://www.ibm.com/support/pages/sites/default/files/inline-files/IBM%20Tape%20Device%20Drivers%20and%20Diagnostic%20Tool%20User%27s%20Guide%2020251028.pdf",
+      "license": "MIT",
+      "accessed": "2026-10-18",
+      "notes": "Original synthetic DTA fixture; vendor grammar reference only. Zero-prefix WWPNs are fictional. No captured site output.",
+      "kind": "synthetic"
+    },
+    {
+      "path": "dta/itdt-test-failure.txt",
+      "url": "https://www.ibm.com/support/pages/sites/default/files/inline-files/IBM%20Tape%20Device%20Drivers%20and%20Diagnostic%20Tool%20User%27s%20Guide%2020251028.pdf",
+      "license": "MIT",
+      "accessed": "2026-10-18",
+      "notes": "Original synthetic DTA fixture; vendor grammar reference only. Zero-prefix WWPNs are fictional. No captured site output.",
+      "kind": "synthetic"
+    },
+    {
+      "path": "dta/itdt-test-success.txt",
+      "url": "https://www.ibm.com/support/pages/sites/default/files/inline-files/IBM%20Tape%20Device%20Drivers%20and%20Diagnostic%20Tool%20User%27s%20Guide%2020251028.pdf",
+      "license": "MIT",
+      "accessed": "2026-10-18",
+      "notes": "Original synthetic DTA fixture; vendor grammar reference only. Zero-prefix WWPNs are fictional. No captured site output.",
+      "kind": "synthetic"
+    },
+    {
+      "path": "dta/switch-a.txt",
+      "url": "https://docs.broadcom.com/doc/FOS-82x-Command-RM",
+      "license": "MIT",
+      "accessed": "2026-10-18",
+      "notes": "Original synthetic DTA fixture; vendor grammar reference only. Zero-prefix WWPNs are fictional. No captured site output.",
+      "kind": "synthetic"
+    },
+    {
+      "path": "dta/switch-b.txt",
+      "url": "https://docs.broadcom.com/doc/FOS-82x-Command-RM",
+      "license": "MIT",
+      "accessed": "2026-10-18",
+      "notes": "Original synthetic DTA fixture; vendor grammar reference only. Zero-prefix WWPNs are fictional. No captured site output.",
+      "kind": "synthetic"
+    },
+    {
+      "path": "dta/config.owner.synthetic.toml",
+      "url": "https://www.ibm.com/support/pages/ibm-tape-diagnostic-tool-itdt-v96",
+      "license": "MIT",
+      "accessed": "2026-10-18",
+      "notes": "Original synthetic generic workflow/owner-adapter configuration; owner commands and verifier JSON are an original project extension, not native vendor output.",
+      "kind": "synthetic"
+    },
+    {
+      "path": "ltfs-index/minimal.xml",
+      "kind": "synthetic",
+      "url": "https://www.snia.org/sites/default/files/2025-03/SNIA-LTFS-Format-v2.5-Technical-Position.pdf",
+      "license": "MIT",
+      "accessed": "2026-10-20",
+      "notes": "Original generated XML from scripts/generate-ltfs-index.py; fictional UUID, names and timestamps. Specification reference only; no copied sample or captured site output."
+    },
+    {
+      "path": "ltfs-index/overlap.xml",
+      "kind": "synthetic",
+      "url": "https://www.snia.org/sites/default/files/2025-03/SNIA-LTFS-Format-v2.5-Technical-Position.pdf",
+      "license": "MIT",
+      "accessed": "2026-10-20",
+      "notes": "Original generated XML from scripts/generate-ltfs-index.py; fictional UUID, names and timestamps. Specification reference only; no copied sample or captured site output."
+    },
+    {
+      "path": "ltfs-index/shared.xml",
+      "kind": "synthetic",
+      "url": "https://www.snia.org/sites/default/files/2025-03/SNIA-LTFS-Format-v2.5-Technical-Position.pdf",
+      "license": "MIT",
+      "accessed": "2026-10-20",
+      "notes": "Original generated XML from scripts/generate-ltfs-index.py; fictional UUID, names and timestamps. Specification reference only; no copied sample or captured site output."
+    },
+    {
+      "path": "ltfs-index/sparse.xml",
+      "kind": "synthetic",
+      "url": "https://www.snia.org/sites/default/files/2025-03/SNIA-LTFS-Format-v2.5-Technical-Position.pdf",
+      "license": "MIT",
+      "accessed": "2026-10-20",
+      "notes": "Original generated XML from scripts/generate-ltfs-index.py; fictional UUID, names and timestamps. Specification reference only; no copied sample or captured site output."
+    },
+    {
+      "path": "ltfs-index/bad-extents.xml",
+      "kind": "synthetic",
+      "url": "https://www.snia.org/sites/default/files/2025-03/SNIA-LTFS-Format-v2.5-Technical-Position.pdf",
+      "license": "MIT",
+      "accessed": "2026-10-20",
+      "notes": "Original generated XML from scripts/generate-ltfs-index.py; fictional UUID, names and timestamps. Specification reference only; no copied sample or captured site output."
+    },
+    {
+      "path": "ltfs-index/duplicate-names.xml",
+      "kind": "synthetic",
+      "url": "https://www.snia.org/sites/default/files/2025-03/SNIA-LTFS-Format-v2.5-Technical-Position.pdf",
+      "license": "MIT",
+      "accessed": "2026-10-20",
+      "notes": "Original generated XML from scripts/generate-ltfs-index.py; fictional UUID, names and timestamps. Specification reference only; no copied sample or captured site output."
+    },
+    {
+      "path": "ltfs-index/deep.xml",
+      "kind": "synthetic",
+      "url": "https://www.snia.org/sites/default/files/2025-03/SNIA-LTFS-Format-v2.5-Technical-Position.pdf",
+      "license": "MIT",
+      "accessed": "2026-10-20",
+      "notes": "Original generated XML from scripts/generate-ltfs-index.py; fictional UUID, names and timestamps. Specification reference only; no copied sample or captured site output."
+    },
+    {
+      "path": "v4/alerts-16.json",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "notes": "Original invented example derived from public format definitions only; no hardware capture or upstream implementation. Generated by scripts/generate-v4-fixtures.py; see feature docs. Reference checked 2026-10-20.",
+      "derived_from": [
+        "fleets/synth-alpha-20261016.json"
+      ]
+    },
+    {
+      "path": "v4/alerts-17.json",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "notes": "Original invented example derived from public format definitions only; no hardware capture or upstream implementation. Generated by scripts/generate-v4-fixtures.py; see feature docs. Reference checked 2026-10-20.",
+      "derived_from": [
+        "fleets/synth-alpha-20261016.json"
+      ]
+    },
+    {
+      "path": "v4/alerts-18.json",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "notes": "Original invented example derived from public format definitions only; no hardware capture or upstream implementation. Generated by scripts/generate-v4-fixtures.py; see feature docs. Reference checked 2026-10-20.",
+      "derived_from": [
+        "fleets/synth-alpha-20261016.json"
+      ]
+    },
+    {
+      "path": "v4/alerts-19.json",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "notes": "Original invented example derived from public format definitions only; no hardware capture or upstream implementation. Generated by scripts/generate-v4-fixtures.py; see feature docs. Reference checked 2026-10-20.",
+      "derived_from": [
+        "fleets/synth-alpha-20261016.json"
+      ]
+    },
+    {
+      "path": "v4/explain-codes.txt",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/lists/asc-num.txt",
+      "license": "MIT",
+      "notes": "Original invented example derived from public format definitions only; no hardware capture or upstream implementation. Generated by scripts/generate-v4-fixtures.py; see feature docs. Reference checked 2026-10-20."
+    },
+    {
+      "path": "v4/inventory-after.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.doc",
+      "license": "MIT",
+      "notes": "Original invented example derived from public format definitions only; no hardware capture or upstream implementation. Generated by scripts/generate-v4-fixtures.py; see feature docs. Reference checked 2026-10-20."
+    },
+    {
+      "path": "v4/inventory-before.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/mtx-org/mtx/blob/master/mtx/mtx.doc",
+      "license": "MIT",
+      "notes": "Original invented example derived from public format definitions only; no hardware capture or upstream implementation. Generated by scripts/generate-v4-fixtures.py; see feature docs. Reference checked 2026-10-20."
+    },
+    {
+      "path": "v4/log-0c.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_logs.c",
+      "license": "MIT",
+      "notes": "Original invented example derived from public format definitions only; no hardware capture or upstream implementation. Generated by scripts/generate-v4-fixtures.py; see feature docs. Reference checked 2026-10-20."
+    },
+    {
+      "path": "v4/log-17.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_logs.c",
+      "license": "MIT",
+      "notes": "Original invented example derived from public format definitions only; no hardware capture or upstream implementation. Generated by scripts/generate-v4-fixtures.py; see feature docs. Reference checked 2026-10-20."
+    },
+    {
+      "path": "v4/log-2e.txt",
+      "kind": "synthetic",
+      "url": "https://www.t10.org/ftp/t10/document.05/05-154r2.pdf",
+      "license": "MIT",
+      "notes": "Original invented example derived from public format definitions only; no hardware capture or upstream implementation. Generated by scripts/generate-v4-fixtures.py; see feature docs. Reference checked 2026-10-20."
+    },
+    {
+      "path": "v4/log-31.txt",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_logs_vendor.c",
+      "license": "MIT",
+      "notes": "Original invented example derived from public format definitions only; no hardware capture or upstream implementation. Generated by scripts/generate-v4-fixtures.py; see feature docs. Reference checked 2026-10-20."
+    },
+    {
+      "path": "v4/log-series.json",
+      "kind": "synthetic",
+      "url": "https://github.com/hreinecke/sg3_utils/blob/master/src/sg_logs.c",
+      "license": "MIT",
+      "notes": "Original invented example derived from public format definitions only; no hardware capture or upstream implementation. Generated by scripts/generate-v4-fixtures.py; see feature docs. Reference checked 2026-10-20."
+    }
+  ]
+}

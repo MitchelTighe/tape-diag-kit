@@ -1,0 +1,28 @@
+{
+  "pages": [
+    {
+      "page": "0x14",
+      "subpage": null,
+      "name": "Device statistics log page",
+      "known": true,
+      "parameters": [
+        {
+          "name": "Lifetime media loads",
+          "value": 42,
+          "unit": null,
+          "raw": "42"
+        },
+        {
+          "name": "Lifetime power on hours",
+          "value": 720,
+          "unit": null,
+          "raw": "720"
+        }
+      ],
+      "supported_pages": [],
+      "raw_lines": []
+    }
+  ],
+  "preamble": [],
+  "warnings": []
+}

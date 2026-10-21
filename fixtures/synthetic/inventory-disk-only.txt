@@ -1,0 +1,1 @@
+[7:2:4:0]    disk    SYNTH    SYNTH-DISK       S027  /dev/sdz  /dev/sg72

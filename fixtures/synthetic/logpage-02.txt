@@ -1,0 +1,3 @@
+Write error counters log page [0x02]:
+  Errors corrected without substantial delay = 4
+  Total uncorrected errors = 0

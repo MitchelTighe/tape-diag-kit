@@ -1,0 +1,13 @@
+{
+  "devices": [
+    {
+      "device": "/dev/sg9",
+      "vendor": "SYNTH",
+      "product": "LTO-DEMO",
+      "serial": "SYNTH-DRIVE-0001",
+      "product_name": "[LTO-DEMO]"
+    }
+  ],
+  "ltfsck": "skipped: no checker or repair command is allowlisted",
+  "warnings": []
+}

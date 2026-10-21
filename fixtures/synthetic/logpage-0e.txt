@@ -1,0 +1,4 @@
+Start-stop cycle counter log page [0x0e]:
+  Specified cycle count over device lifetime = 100000
+  Accumulated start-stop cycles = 120
+  Accumulated load-unload cycles = 42

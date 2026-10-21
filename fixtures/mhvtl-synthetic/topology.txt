@@ -1,0 +1,2 @@
+/dev/sg31  9 0 1 0 1 /dev/st0
+/dev/sg40 9 0 2 0 8 /dev/sch0

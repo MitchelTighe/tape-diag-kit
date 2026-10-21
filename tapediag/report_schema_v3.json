@@ -1,0 +1,1964 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/tapediag/schema/tapediag-report.v3.json",
+  "title": "tapediag v3 report or field workflow",
+  "$defs": {
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "inventory_device": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "drive",
+            "changer"
+          ]
+        },
+        "address": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "vendor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "revision": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "device": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "generic_device": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "nonrewinding_device": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "address",
+        "vendor",
+        "model",
+        "revision",
+        "device",
+        "generic_device",
+        "nonrewinding_device"
+      ],
+      "additionalProperties": false
+    },
+    "inventory": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "enum": [
+            "lsscsi",
+            "sysfs"
+          ]
+        },
+        "devices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/inventory_device"
+          }
+        },
+        "warnings": {
+          "$ref": "#/$defs/warnings"
+        }
+      },
+      "required": [
+        "source",
+        "devices",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "flag": {
+      "type": "object",
+      "properties": {
+        "flag": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
+        },
+        "name": {
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "Critical",
+            "Warning",
+            "Info"
+          ]
+        },
+        "action": {
+          "type": "string"
+        },
+        "defined": {
+          "type": "boolean"
+        },
+        "active": {
+          "const": true
+        }
+      },
+      "required": [
+        "flag",
+        "name",
+        "severity",
+        "action",
+        "defined",
+        "active"
+      ],
+      "additionalProperties": false
+    },
+    "tapealert": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "const": "0x2e"
+        },
+        "profile": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "active_flags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/flag"
+          }
+        },
+        "observed_flags": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 64
+          },
+          "uniqueItems": true
+        },
+        "inactive_flags": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 64
+          },
+          "uniqueItems": true
+        },
+        "unobserved_flags": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 64
+          },
+          "uniqueItems": true
+        },
+        "unknown_flags": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "flag": {
+                "type": "integer"
+              },
+              "value": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "flag",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "warnings": {
+          "$ref": "#/$defs/warnings"
+        }
+      },
+      "required": [
+        "page",
+        "profile",
+        "sources",
+        "active_flags",
+        "observed_flags",
+        "inactive_flags",
+        "unobserved_flags",
+        "unknown_flags",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "parameter": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "type": [
+            "string",
+            "number",
+            "null"
+          ]
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "raw": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "value",
+        "unit",
+        "raw"
+      ],
+      "additionalProperties": false
+    },
+    "supported_page": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "type": "string"
+        },
+        "subpage": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "page",
+        "subpage",
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "logpage": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "type": "string"
+        },
+        "subpage": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "known": {
+          "type": "boolean"
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/parameter"
+          }
+        },
+        "supported_pages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/supported_page"
+          }
+        },
+        "raw_lines": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "page",
+        "subpage",
+        "name",
+        "known",
+        "parameters",
+        "supported_pages",
+        "raw_lines"
+      ],
+      "additionalProperties": false
+    },
+    "logpages": {
+      "type": "object",
+      "properties": {
+        "pages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/logpage"
+          }
+        },
+        "preamble": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "warnings": {
+          "$ref": "#/$defs/warnings"
+        }
+      },
+      "required": [
+        "pages",
+        "preamble",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "drive_status": {
+      "type": "object",
+      "properties": {
+        "vendor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "product": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "revision": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "density": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "density_description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "block_size": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "file_number": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "block_number": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "online": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "write_protect": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ready": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status_flags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "warnings": {
+          "$ref": "#/$defs/warnings"
+        }
+      },
+      "required": [
+        "vendor",
+        "product",
+        "revision",
+        "density",
+        "density_description",
+        "block_size",
+        "file_number",
+        "block_number",
+        "online",
+        "write_protect",
+        "ready",
+        "status_flags",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "element": {
+      "type": "object",
+      "properties": {
+        "element": {
+          "type": "integer"
+        },
+        "full": {
+          "type": "boolean"
+        },
+        "barcode": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "alternate_barcode": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_slot": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "element",
+        "full",
+        "barcode",
+        "alternate_barcode",
+        "source_slot"
+      ],
+      "additionalProperties": false
+    },
+    "library": {
+      "type": "object",
+      "properties": {
+        "device": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reported_drives": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reported_slots": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reported_ie_ports": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "drives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/element"
+          }
+        },
+        "slots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/element"
+          }
+        },
+        "ie_ports": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/element"
+          }
+        },
+        "warnings": {
+          "$ref": "#/$defs/warnings"
+        }
+      },
+      "required": [
+        "device",
+        "reported_drives",
+        "reported_slots",
+        "reported_ie_ports",
+        "drives",
+        "slots",
+        "ie_ports",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "ltfs_device": {
+      "type": "object",
+      "properties": {
+        "device": {
+          "type": "string"
+        },
+        "vendor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "product": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "serial": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "product_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "device",
+        "vendor",
+        "product",
+        "serial",
+        "product_name"
+      ],
+      "additionalProperties": false
+    },
+    "ltfs": {
+      "type": "object",
+      "properties": {
+        "devices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ltfs_device"
+          }
+        },
+        "ltfsck": {
+          "type": "string"
+        },
+        "warnings": {
+          "$ref": "#/$defs/warnings"
+        }
+      },
+      "required": [
+        "devices",
+        "ltfsck",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "itdt_device": {
+      "type": "object",
+      "properties": {
+        "index": {
+          "type": "integer"
+        },
+        "device": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "revision": {
+          "type": "string"
+        },
+        "serial": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "driver": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "index",
+        "device",
+        "model",
+        "revision",
+        "serial",
+        "address",
+        "driver"
+      ],
+      "additionalProperties": false
+    },
+    "itdt": {
+      "type": "object",
+      "properties": {
+        "adapter": {
+          "type": "string"
+        },
+        "devices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/itdt_device"
+          }
+        },
+        "inquiry": {
+          "type": "object",
+          "properties": {
+            "vendor": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "product": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "revision": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "vendor",
+            "product",
+            "revision"
+          ],
+          "additionalProperties": false
+        },
+        "tapealert": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/tapealert"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "warnings": {
+          "$ref": "#/$defs/warnings"
+        },
+        "raw_lines": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "adapter",
+        "devices",
+        "inquiry",
+        "tapealert",
+        "warnings",
+        "raw_lines"
+      ],
+      "additionalProperties": false
+    },
+    "command": {
+      "type": "object",
+      "properties": {
+        "argv": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "returncode": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "stdout": {
+          "type": "string"
+        },
+        "stderr": {
+          "type": "string"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "timed_out": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "argv",
+        "returncode",
+        "stdout",
+        "stderr",
+        "error",
+        "timed_out"
+      ],
+      "additionalProperties": false
+    },
+    "error": {
+      "type": "object",
+      "properties": {
+        "section": {
+          "type": "string"
+        },
+        "device": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "section",
+        "device",
+        "message"
+      ],
+      "additionalProperties": false
+    },
+    "inquiry": {
+      "type": "object",
+      "properties": {
+        "vendor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "product": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "revision": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "serial": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "identifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "type",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "vendor",
+        "product",
+        "revision",
+        "serial",
+        "identifiers",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "mam": {
+      "type": "object",
+      "properties": {
+        "attributes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "integer",
+                  "number",
+                  "null"
+                ]
+              },
+              "unit": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "redacted": {
+                "type": "boolean"
+              },
+              "source": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "value",
+              "unit",
+              "redacted",
+              "source"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "attributes",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "topology": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "mappings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "generic_device": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "kind": {
+                "enum": [
+                  "drive",
+                  "changer"
+                ]
+              },
+              "device": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "generic_device",
+              "address",
+              "kind",
+              "device"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "source",
+        "mappings",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "check": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "info",
+            "warn"
+          ]
+        },
+        "message": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "rule",
+        "severity",
+        "message",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "report": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "3.0"
+        },
+        "tool_version": {
+          "type": "string"
+        },
+        "mode": {
+          "enum": [
+            "offline",
+            "execute"
+          ]
+        },
+        "inventory": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/inventory"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "drives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "device": {
+                "type": "string"
+              },
+              "tapealert": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/tapealert"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "logpages": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/logpages"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "drive_status": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/drive_status"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "mam": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/mam"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "inquiry": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/inquiry"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "tapealert_response": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/tapealert_response"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "asset_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "identity_basis": {
+                "enum": [
+                  "synthetic-serial",
+                  "device-path"
+                ]
+              },
+              "health": {
+                "$ref": "#/$defs/asset_health"
+              }
+            },
+            "required": [
+              "device",
+              "tapealert",
+              "logpages",
+              "drive_status",
+              "mam",
+              "inquiry",
+              "tapealert_response",
+              "asset_id",
+              "identity_basis",
+              "health"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "libraries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "device": {
+                "type": "string"
+              },
+              "status": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/library"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "checks": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/check"
+                }
+              },
+              "asset_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "identity_basis": {
+                "enum": [
+                  "synthetic-serial",
+                  "device-path"
+                ]
+              },
+              "health": {
+                "$ref": "#/$defs/asset_health"
+              }
+            },
+            "required": [
+              "device",
+              "status",
+              "checks",
+              "asset_id",
+              "identity_basis",
+              "health"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "ltfs": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ltfs"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "itdt": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/itdt"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "commands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/command"
+          }
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/error"
+          }
+        },
+        "document_type": {
+          "const": "report"
+        },
+        "topology": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/topology"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "health": {
+          "$ref": "#/$defs/fleet_health"
+        },
+        "provenance": {
+          "type": "object",
+          "properties": {
+            "source": {
+              "type": "string"
+            },
+            "references": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "identifier_policy": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "source",
+            "references",
+            "identifier_policy"
+          ],
+          "additionalProperties": false
+        },
+        "fleet_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "captured_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+        },
+        "migration": {
+          "type": "object",
+          "properties": {
+            "from_version": {
+              "enum": [
+                "1.0",
+                "2.0"
+              ]
+            },
+            "original_tool_version": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "from_version",
+            "original_tool_version",
+            "notes"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "tool_version",
+        "mode",
+        "inventory",
+        "drives",
+        "libraries",
+        "ltfs",
+        "itdt",
+        "commands",
+        "errors",
+        "document_type",
+        "topology",
+        "health",
+        "provenance",
+        "fleet_id",
+        "captured_at",
+        "migration"
+      ],
+      "additionalProperties": false
+    },
+    "step": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "inventory",
+            "inquiry",
+            "tapealert",
+            "logpages",
+            "mam",
+            "library",
+            "library-inquiry",
+            "readiness"
+          ]
+        },
+        "device": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "argv": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "explanation": {
+          "type": "string"
+        },
+        "prerequisite": {
+          "enum": [
+            "no medium needed",
+            "medium loaded",
+            "changer present"
+          ]
+        },
+        "expected_seconds": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "interpretation": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "pass",
+            "warn",
+            "fail",
+            "skipped"
+          ]
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/command"
+          }
+        },
+        "data": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/inventory"
+            },
+            {
+              "$ref": "#/$defs/inquiry"
+            },
+            {
+              "$ref": "#/$defs/tapealert"
+            },
+            {
+              "$ref": "#/$defs/logpages"
+            },
+            {
+              "$ref": "#/$defs/mam"
+            },
+            {
+              "$ref": "#/$defs/library"
+            },
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/drive_status"
+            }
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "device",
+        "argv",
+        "explanation",
+        "prerequisite",
+        "expected_seconds",
+        "interpretation",
+        "source",
+        "status",
+        "results",
+        "data",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "tapealert_response": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "const": "0x12"
+        },
+        "profile": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "active_flags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/flag"
+          }
+        },
+        "observed_flags": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 64
+          },
+          "uniqueItems": true
+        },
+        "inactive_flags": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 64
+          },
+          "uniqueItems": true
+        },
+        "unobserved_flags": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 64
+          },
+          "uniqueItems": true
+        },
+        "unknown_flags": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "flag": {
+                "type": "integer"
+              },
+              "value": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "flag",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "warnings": {
+          "$ref": "#/$defs/warnings"
+        }
+      },
+      "required": [
+        "page",
+        "profile",
+        "sources",
+        "active_flags",
+        "observed_flags",
+        "inactive_flags",
+        "unobserved_flags",
+        "unknown_flags",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "score_reason": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "deduction": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "condition": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "accessed": {
+          "const": "2026-10-18"
+        },
+        "basis": {
+          "const": "heuristic"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "deduction",
+        "condition",
+        "source",
+        "accessed",
+        "basis",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "asset_health": {
+      "type": "object",
+      "properties": {
+        "model": {
+          "const": "triage-v3.0.0"
+        },
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "grade": {
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        },
+        "assessment": {
+          "enum": [
+            "clear",
+            "attention",
+            "unknown"
+          ]
+        },
+        "coverage": {
+          "enum": [
+            "complete",
+            "incomplete"
+          ]
+        },
+        "gaps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/score_reason"
+          }
+        }
+      },
+      "required": [
+        "model",
+        "score",
+        "grade",
+        "assessment",
+        "coverage",
+        "gaps",
+        "reasons"
+      ],
+      "additionalProperties": false
+    },
+    "fleet_health": {
+      "type": "object",
+      "properties": {
+        "model": {
+          "const": "triage-v3.0.0"
+        },
+        "score": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "aggregation": {
+          "const": "minimum asset score; no assets means unknown"
+        },
+        "assets": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "attention": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "model",
+        "score",
+        "aggregation",
+        "assets",
+        "attention"
+      ],
+      "additionalProperties": false
+    },
+    "decision": {
+      "type": "object",
+      "properties": {
+        "device": {
+          "type": "string"
+        },
+        "outcome": {
+          "type": "string"
+        },
+        "path": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reason": {
+          "type": "string"
+        },
+        "next_steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "device",
+        "outcome",
+        "path",
+        "reason",
+        "next_steps"
+      ],
+      "additionalProperties": false
+    },
+    "workflow": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "3.0"
+        },
+        "document_type": {
+          "const": "workflow"
+        },
+        "tool_version": {
+          "type": "string"
+        },
+        "workflow": {
+          "enum": [
+            "identify",
+            "firmware",
+            "tapealert",
+            "cleaning",
+            "mam",
+            "dump-plan",
+            "inventory-audit",
+            "wont-load",
+            "slow-drive"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "mode": {
+          "enum": [
+            "dry-run",
+            "offline",
+            "execute"
+          ]
+        },
+        "medium_loaded": {
+          "type": "boolean"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/step"
+          }
+        },
+        "decisions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/decision"
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "not_performed": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "status": {
+                "const": "NOT PERFORMED BY THIS TOOL - see vendor tool"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "complete": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "schema_version",
+        "document_type",
+        "tool_version",
+        "workflow",
+        "title",
+        "mode",
+        "medium_loaded",
+        "steps",
+        "decisions",
+        "limitations",
+        "not_performed",
+        "complete"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "anyOf": [
+    {
+      "$ref": "#/$defs/report"
+    },
+    {
+      "$ref": "#/$defs/workflow"
+    }
+  ]
+}

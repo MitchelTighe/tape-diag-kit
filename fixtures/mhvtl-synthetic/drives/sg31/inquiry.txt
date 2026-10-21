@@ -1,0 +1,5 @@
+Vendor identification: SYNTH
+Product identification: LTO-DEMO
+Product revision level: 0001
+SCSI_SERIAL=SYNTH-MHVTL-DRIVE-01
+SCSI_IDENT_LUN_NAA_REG=SYNTH-MHVTL-WWN-01

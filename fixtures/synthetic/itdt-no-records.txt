@@ -1,0 +1,2 @@
+SYNTH fixture: incomplete saved scan
+SYNTH fixture: device rows deliberately absent

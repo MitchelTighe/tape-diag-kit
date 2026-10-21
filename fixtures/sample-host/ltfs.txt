@@ -1,0 +1,3 @@
+LTFS14000I LTFS starting, synthetic offline capture.
+Tape Device list:.
+Device Name = /dev/sg9, Vender ID = SYNTH, Product ID = LTO-DEMO, Serial Number = SYNTH-DRIVE-0001, Product Name = [LTO-DEMO] .

@@ -1,0 +1,21 @@
+{
+  "vendor": "SYNTH",
+  "product": "LTO-DEMO",
+  "revision": "0001",
+  "density": 94,
+  "density_description": "LTO-8",
+  "block_size": 0,
+  "file_number": 2,
+  "block_number": 17,
+  "online": true,
+  "write_protect": true,
+  "ready": true,
+  "status_flags": [
+    "BOT",
+    "ONLINE",
+    "WR_PROT"
+  ],
+  "warnings": [
+    "block size 0 means variable-length blocks"
+  ]
+}

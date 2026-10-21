@@ -1,0 +1,57 @@
+# DTA schema 1. Replace ALL placeholders locally; never commit site config.
+# These zero WWPNs and .invalid URL are deliberately non-production placeholders.
+# One representative switch per fabric (not every switch in the same fabric).
+# Enumerate EVERY drive WWPN and every domain,port-index zoning identity.
+schema = 1
+
+[drive]
+serial = "REPLACE_DRIVE_SERIAL" # Host-visible/location serial: ITDT scan/inquiry.
+manufacturer_serial = "REPLACE_PHYSICAL_SERIAL" # Physical drive; must match library separately.
+test_barcode = "REPLACE_TEST_BARCODE"
+wwpns = ["00:00:00:00:00:00:00:01", "00:00:00:00:00:00:00:02"]
+
+[library]
+url = "https://REPLACE_LIBRARY.invalid"
+partition = "REPLACE_PARTITION"
+drive_id = "FR1/DBA1/fLTO-DRV1" # REPLACE physical component ID from driveList.xml
+drive_offset = 1              # REPLACE BlueScale offset; not SCSI element ID
+home_slot = 1                 # REPLACE reserved TEST home offset
+username_env = "DTA_LIBRARY_USERNAME"
+password_env = "DTA_LIBRARY_PASSWORD"
+
+[mover]
+ssh = "REPLACE_MOVER" # Existing SSH alias; known-host trust must already exist.
+itdt = "/opt/REPLACE_ITDT/itdt"
+version = "9.6.2" # Pin actual installed SE release; do not download via dta.
+device = "/dev/sg9" # REPLACE and verify serial mapping; no inferred path numbers.
+work_dir = "/var/tmp/REPLACE_DTA" # Pre-existing private maintenance parent.
+timeout_seconds = 10800
+
+# Optional vendor-neutral owner lock/verifier adapter. Enable only after reviewing
+# your local adapter. These are argv templates, NOT native vendor command claims.
+# All five placeholders below are substituted as individual argv data.
+# [owner]
+# ssh = "REPLACE_OWNER"
+# drive = "REPLACE_OWNER_DRIVE"
+# device = "REPLACE_OWNER_DEVICE"
+# lock_argv = ["/opt/REPLACE_DTA_OWNER/adapter", "lock", "{drive}", "{device}", "{serial}", "{manufacturer_serial}", "{run_id}"]
+# unlock_argv = ["/opt/REPLACE_DTA_OWNER/adapter", "unlock", "{drive}", "{device}", "{serial}", "{manufacturer_serial}", "{run_id}"]
+# verify_argv = ["/opt/REPLACE_DTA_OWNER/adapter", "probe", "{drive}", "{device}", "{serial}", "{manufacturer_serial}", "{run_id}"]
+
+[[switches]]
+name = "REPLACE_SWITCH_A"
+ssh = "REPLACE_SWITCH_A"
+fabric = "REPLACE_FABRIC_A"
+configuration = "REPLACE_ACTIVE_CFG_A"
+diagnostic_zones = ["REPLACE_DIAG_ZONE_A"]
+ports = ["1,1"] # REPLACE actual domain,port INDEX if used, otherwise [].
+removals = [{zone = "REPLACE_PROD_ZONE_A", member = "REPLACE_DRIVE_ALIAS_A"}]
+
+[[switches]]
+name = "REPLACE_SWITCH_B"
+ssh = "REPLACE_SWITCH_B"
+fabric = "REPLACE_FABRIC_B"
+configuration = "REPLACE_ACTIVE_CFG_B"
+diagnostic_zones = ["REPLACE_DIAG_ZONE_B"]
+ports = ["2,1"] # REPLACE actual domain,port INDEX if used, otherwise [].
+removals = [{zone = "REPLACE_PROD_ZONE_B", member = "REPLACE_DRIVE_ALIAS_B"}]
